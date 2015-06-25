@@ -19,3 +19,6 @@ $ screen -wipe
 
 ### to rename current window
 ^a, A // Ctrl+a, Shift+a
+
+### to move left-right through screens
+^a, Spacebar; ^a, Backspace
