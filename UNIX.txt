@@ -52,3 +52,7 @@ $ kill <PID>
 
 ### expand alias (TCSH)
 ^x,? // i.e. shift+/
+
+### group basics
+ls -l output
+filetype; user, group, world (x3); user(owned); group(owned);
