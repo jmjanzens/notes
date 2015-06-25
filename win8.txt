@@ -1,0 +1,3 @@
+### access startup items folder (alternate)
+Run: "shell:startup"
+

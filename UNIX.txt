@@ -1,0 +1,54 @@
+# scroll up/down in terminal:
+shift+pageup/pagedown
+
+# list
+$ la //list all shortform
+$ ll //list all with details shortform!
+# tree intricacies
+tree ./ -d // only print directories
+tree ./ -P <file>.<suffix> 	// only print file which match Pattern
+				// wildcards allowed.
+        -f                      // shows full path in ea.
+
+# aliases
+alias q='echo cry cry cry' // entering q will trigger echo
+
+# to make aliases permanent (ubuntu, mint):
+modify "/etc/bash.bashrc", format:
+  alias newalias='sh ~/runMe.sh'
+
+#c shell
+tcsh
+
+#to switch shells
+$ sh
+> tcsh // or bash, etc.
+
+#to switch shells automatically on next startup
+$ shch
+> tcsh
+
+#to clear current command line
+Ctrl+u //clears
+Ctrl+c //clears, and starts new line
+
+#to clear screen
+Ctrl+l //seems to be same thing as '$ clear' command
+
+#show list of usb devices (mouse, keyboard, etc)
+$ lsusb
+
+# network connections
+$ netstat -ant
+
+### jobs basics
+Ctrl+z //suspend job
+$ jobs //see list of jobs
+$ fg //resume first job
+$ fg %2 //resume second jobs
+
+### terminate/kill suspended job
+$ kill <PID>
+
+### expand alias (TCSH)
+^x,? // i.e. shift+/

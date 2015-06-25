@@ -1,0 +1,21 @@
+### default common commands
+^a, c // new window
+^a, [p, n] //switch to prev and next window
+^a, [n] //switch to number n window
+^a, " //show list of windows (keys, enter to select, view)
+
+### to scroll up and down buffered screen
+^a, esc //allows arrow keys, pageUp, pageDown navigation
+Enter, Enter //go back to end of buffer (resume)
+
+### to view screen by pid
+$ screen -list
+
+### to close all screens
+$ killall -15 screen
+
+### to close only unreachable screens
+$ screen -wipe
+
+### to rename current window
+^a, A // Ctrl+a, Shift+a

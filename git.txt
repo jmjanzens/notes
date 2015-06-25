@@ -1,0 +1,67 @@
+# get on a submodule's branch (i.e. cd dir-main/dir-common)
+ 2142  git submodule init
+ 2143  git submodule update
+ 2144  cd  dir-common/
+ 2145  git branch
+
+//grab it:
+ 2146  git checkout master
+ 2147  git pull
+ 2148  git branch
+
+//view 'remote' branches:
+ 2149  git branch -r
+
+//follow will sync up with branch named 'validate':
+ 2150  git checkout -b validate origin/validate
+ 2151  git status
+ 2152  git branch
+ 2153  git pull
+
+# show log WITH code affected
+$ git log -p
+
+# git stash basic
+$ git stash //make a stash of index (0 + num of stashes)
+$ git stash list //list of stashes
+$ git stash apply 'stash@{num}' //recover this stash and keep it in list
+$ git stash pop 'stash@{num}' //recover this stash and remove from list
+$ git stash drop 'stash@{num}' //remove stash from list
+
+# show git diff AFTER staging file
+$ git diff --cached file.ext
+
+### to hide certain files in git status
+$ git config --global core.excludesfile ~/.gitignore
+// then create/edit ~/.gitignore to include ignored files, e.g.:
+.*.sw* //to ignore all vim swap files (.swp, .swo)
+
+### diff between two branches
+$ git diff brancha..branchb //tips of both branches
+$ git diff brancha...branchb //diff from common ancestor
+
+### change un-pushed commit message
+$ git commit --amend
+
+### very simple log output
+$ git log --pretty=oneline
+
+### revert last commit, preserving local changes
+$ git reset --soft HEAD~1
+
+// the below has been tested - the method above has not.
+# to restore a previous commit
+# This will destroy any local modifications.
+# Don't do it if you have uncommitted work you want to keep.
+git reset --hard [commit id]
+
+# Alternatively, if there's work to keep:
+git stash
+git reset --hard [commit id]
+git stash pop
+
+### unstage (undo add) files
+$ git reset HEAD file.ext
+
+### git merge tool (vimdiff splits highlighting)
+$ git mergetool

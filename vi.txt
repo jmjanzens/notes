@@ -1,0 +1,77 @@
+### set vim as default editor for any shell
+$ which vim //locate dir where vim is installed
+$ echo "export EDITOR=/usr/bin/vim" >> ~/.[SHELL]rc
+$ echo "export VISUAL=/usr/bin/vim" >> ~/.[SHELL]rc
+
+# GOTO line n
+Shift+G, 666 //jumps cursor to line number 666
+
+# show complete path to current file
+:echo expand('%:p')
+
+# show partial path from within vi
+Ctrl+g
+
+# to add permanent startup settings
+$ vi /home/<user>/.vimrc //create if not exists!
+	// examples 'colorscheme elflord\nset number', etc.
+
+# paste from clipboard
+insert-mode: Ctrl+Shift+v //in gnome-terminal
+or right-click paste-menu in other // also from insert-mode
+
+# to show/hide line numbers
+:set nu
+:set nu!
+
+### split
+:vsp path/to/new/file.ext // creates vertical split bar 'tween files
+:sp //horizontal bar
+^w+w //toggle focus 'tween splits
+^w,[up, down] //focus on above/below split
+
+### swap split windows
+^w, r //swap current window with 'next' one
+
+### adjusting width of vertical split
+^w, [< || >] // one char
+[NUM], ^w, [< || >] // NUM chars
+
+### jump to opposing bracket
+% // i.e. Shift+5
+// can be paired powerfully:
+=, % //indents all code w/in brackets
+d, % //deletes all code w/in brackets
+
+### case switching (a, A)
+F1 //toggle char under cursor to upper/lower case
+F1 - F4 //toggle [1-4] char's cases
+
+### recording macros
+(from command mode)
+q, l //'l' = letter from a-z
+@, l //playback recording assigned to this letter
+@@   //playback last playback
+
+### insert literal character (e.g. tab, even when expandtab set)
+<from Insert mode> 
+ctrl+v, [TAB] //good for m4s
+
+### to refresh edits of file exterior to vim session (e.g. git merge)
+:edit //re-opens present file when used without arguments
+:set autoread // in .vimrc makes Vim auto-refresh
+
+### different visual modes
+v 	// normal drag-and-select
+ctrl+v	// visual block
+shift+v	// visual line !
+
+### auto complete suggestions !
+(from Insert mode)
+^x, TAB
+
+### code folding
+zc //close fold
+zo //open fold
+zM //close all folds
+zR //open all folds

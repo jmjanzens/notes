@@ -1,0 +1,81 @@
+		#########################
+		#	hanging test	#
+		#########################
+$ sudo pkill beam
+
+		#########################
+		#     common commands	#
+		#########################
+
+#local schemas stored in
+/var/lib/couchdb/<name>.couch
+
+#restart couchdb
+sudo service couchdb restart /* may take a few seconds! */
+
+		#########################
+		#	via curl	#
+		#########################
+
+#show all schemas' names
+curl -X GET http://127.0.0.1:5984/_all_dbs
+
+#to access futon
+http://192.168.1.65:5984/_utils/ /* will need to restart */
+
+#to create schema 'couchdbschool' 
+curl -X PUT http://127.0.0.1:5984/couchdbschool
+
+#to insert values into a schema
+curl -X POST http://127.0.0.1:5984/couchdbschool -d '{"_id": "robert", "type": "human"}' -H "Content-Type: application/json"
+
+		#########################
+		#	functions	#
+		#########################
+
+#structure of 'map function' written in javascript
+function(doc 	
+	/* 
+	 * all map functions take a single parameter 'doc'
+	 * func checks whether document has following attributes
+	 * func will query ALL documents once, but further queries
+	 *  will use data acquired from first query. (or is that only for result?)
+	 */ )
+	if (doc.date && doc.title) {
+		/*
+		 * run built-in func 'emit' with title, date args
+		 */
+		emit(doc.date, doc.title);
+			/*  further:
+			 * emit always takes two args '(key, value)'
+			 * emit creates entry in our view's 'result'
+			 *  result will be sorted by key (lo to hi)
+			 * emit can be called multiple times to create
+			 *  multiple entries in view results (for single doc)
+			 */
+	}
+}
+
+
+
+[11:18] <James> no futon
+[11:18] <James> :(
+[11:18] <brb> Yeah, futon won't load for me. Either.
+[11:18] * brb is now known as jm-back
+[11:19] <rtr> okay that I can help with
+[11:19] <rtr> with sudo edit the configuration file /etc/couchdb/local.ini
+[11:19] <rtr> and modify the following lines
+[11:20] <rtr> you will see [httpd] section
+[11:20] <rtr> change the ;bind_address = 127.0.0.1 to bind_address = 0.0.0.0
+[11:20] <rtr> so 2 changes to the line, 1) uncomment it, 2) change set address to equivalent of INADDR_ANY.
+[11:20] <rtr> then restart couchdb
+[11:21] <James> remove the ;
+[11:21] <rtr> thats (1)
+[11:21] <James> kk
+[11:21] <James> just makeing sure
+[11:21] <James> uncomment the prot too
+[11:22] <James> port
+[11:22] <James> ?
+[11:22] <jm-back> I'mma leave it as is for now.
+[11:22] <rtr> no, leave it
+[11:25] <James> w00t
