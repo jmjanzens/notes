@@ -56,3 +56,7 @@ $ kill <PID>
 ### group basics
 ls -l output
 filetype; user, group, world (x3); user(owned); group(owned);
+
+### user time zone
+$ date -u   //check user's time/tz
+$ dpkg-reconfigure tzdata   //to alter (select GMT+4 for EST)
