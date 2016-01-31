@@ -1,0 +1,33 @@
+### search strings containing 'foo' in a_file.txt
+$ grep "foo" a_file.txt
+
+### search string NOT containing 'foo' in a_file.txt
+#   and number them
+$ grep "foo" a_file.txt -vn
+
+### other useful parameters
+-c //supress printing matching lines, and only print number of occurences
+-i //ignore case
+-x //eXact matches only (lines that only contain pattern)
+
+### search all files in dir
+$ grep -l "foo" *
+
+### grep with or conditions
+$ grep -v 'util\|Binary\|/b/' //will exclude either of these three
+
+### simple grep this or that (good for file extensions)
+$ grep -rnw . -e Makefile.{am,in} //match Makefile.am, or Makefile.in
+
+# to find String CONTENTS of files
+$ sudo grep -rnw 'directory' -e "pattern"
+/* -r or -R is recursive, -n is line number 
+and -w stands match the whole word. 
+-l (letter L) can be added to have just the 
+file name. */
+
+### match streaming console output
+$ watch 'netstat -i|grep wlan0'
+
+### reverse diff between two files
+$ grep -F[x]f a b --color

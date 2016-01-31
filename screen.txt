@@ -1,0 +1,45 @@
+### default common commands
+^a, c // new window
+^a, [p, n] //switch to prev and next window
+^a, [n] //switch to number n window
+^a, " //show list of windows (keys, enter to select, view)
+
+### to scroll up and down buffered screen
+^a, esc //allows arrow keys, pageUp, pageDown navigation
+Enter, Enter //go back to end of buffer (resume)
+
+### to view screen by pid
+$ screen -list
+
+### to close all screens
+$ killall -15 screen
+
+### to close only unreachable screens
+$ screen -wipe
+
+### to rename current window
+^a, A // Ctrl+a, Shift+a
+
+### re-order window numbers (order)
+^a, :number [n]
+
+### split verically; horizontally (regions)
+^a, |; ^a, S
+
+### switch regions
+^a, TAB
+
+### close current region
+^a, X
+
+### custom screenrc with its own tabs/commands
+to use, bind:   alias some_alias 'screen -c <path/to/.thisrc>'
+chdir <dir to start in>
+screen -t <name> <num> <actions [path/file]>
+select <num> // start session on this screen
+stuff '<command String>' // shell commands to issue
+
+### named sessions
+$ screen -S <sessionname>
+^a, :sessionname <mysession> // to rename already running session
+

@@ -1,0 +1,157 @@
+# scroll up/down in terminal:
+shift+pageup/pagedown
+
+# list
+$ la //list all shortform
+$ ll //list all with details shortform!
+# tree intricacies
+tree ./ -d // only print directories
+tree ./ -P <file>.<suffix> 	// only print file which match Pattern
+				// wildcards allowed.
+        -f                      // shows full path in ea.
+
+# aliases
+alias q='echo cry cry cry' // entering q will trigger echo
+
+# to make aliases permanent (ubuntu, mint):
+modify "/etc/bash.bashrc", format:
+  alias newalias='sh ~/runMe.sh'
+
+### (bash) repeat command 30 times with variable
+$ 
+for i in {1..30}; do udevadm info --name=/dev/ttyUSB$i | grep 'MAJOR\|MINOR'; done
+
+#c shell
+tcsh
+
+#to switch shells
+$ sh
+> tcsh // or bash, etc.
+
+### to switch shells automatically on next startup
+$ chsh //change shell
+> /bin/tcsh //path to shell
+
+#to clear current command line
+Ctrl+u //clears
+Ctrl+c //clears, and starts new line
+
+#to clear screen
+Ctrl+l //seems to be same thing as '$ clear' command
+
+#show list of usb devices (mouse, keyboard, etc)
+$ lsusb
+
+# network connections
+$ netstat -ant
+
+### jobs basics
+Ctrl+z //suspend job
+$ jobs //see list of jobs
+$ fg //resume first job
+$ fg %2 //resume second jobs
+
+### terminate/kill suspended job
+$ kill <PID>
+
+### view remote directories
+$ ssh <user@host> <command> 
+ // e.g. `ssh jmjanzen@192.168.1.68 ls -l ~/myscripts`
+// set aliases for common user@host in ~/.ssh/config for convenience
+// $ man ssh-config for howto
+
+### secure copy FROM remote TO local (scp)
+$ scp <user@host>:<~/remote/path> <~/local/path>
+
+### secure copy TO remote FROM local (scp)
+$ scp <local/file.ext> <user@host>:<~/remote/path>
+
+### list (ls) directory contents recusively
+-R
+i.e. $  ls -lR | grep '\.js' --color=always
+
+### show Linux version, distro, kernal number, etc
+$ uname --all or -a
+/* or */
+$ cat /proc/version
+
+### how to read a simple diff
+$ diff <a> <b>
+< a version
+---
+> b version
+
+### how to print a side-by-side diff
+diff a b --side-by-side /*or*/ -y
+
+### print diff like git does
+diff a b -u // 'unified' style
+
+### disk and memory commands
+df //file system disk space usage
+du //estimate file space usage
+free -h //free and used memory
+
+### remove need for ssh passphrase
+$ ssh-keygen -p
+/* then provide key (default: ~/.ssh/id_rsa)
+   then enter old passphrase
+   then enter new passphrase x2 */
+
+### view all services
+$ sudo service --status-all
+// [+] = running
+// [-] = stopped
+// [?] = service managed by 'upstart'
+
+### view services managed by 'upstart'
+$ initctl list
+
+### preserve environment when running sudo
+sudo -E <command(s)>
+
+### preserve alias when running sudo
+sudo -s <alias>
+
+### repeat specific number command from `history`
+$ history
+	1	ls
+	2	cat thing
+	3	vi -O thing thing2
+$ !2 //repeats `cat thing`
+
+### understand netstat interface display
+$ netstat -i
+/* in last column:
+   (long flag names shows in ipconfig)
+	B = A broadcast address has been set.
+	L = This interface is a loopback device.
+	M = All packets are received (promiscuous mode).
+	O = ARP is turned off for this interface.
+	P = This is a point-to-point connection.
+	R = Interface is running.
+	U = Interface is up. 
+*/
+
+
+### command line tricks ###
+### cut and paste command line
+^u //cut
+^y //paste
+### jump to beginning / end of cmd line
+^a, or HOME //beginning
+^e, or END  //end
+### repeat long lines
+ls dir/{,subdir} //== ls dir/ dir/subdir
+
+### manual page sections
+1   Executable programs or shell commands
+2   System calls (functions provided by the kernel)
+3   Library calls (functions within program libraries)
+4   Special files (usually found in /dev)
+5   File formats and conventions eg /etc/passwd
+6   Games
+7   Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)
+8   System administration commands (usually only for root)
+9   Kernel routines [Non standard]
+

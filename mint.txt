@@ -1,0 +1,10 @@
+# super task-manager
+Windows+l // event log, and hit eyedropper to select visible tasks!
+
+# show un-show desktop
+Windows+d //toggles
+
+### custom ###
+
+# launch web browser
+Ctrl+Alt+b
