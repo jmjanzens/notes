@@ -22,3 +22,13 @@ alias f 'foreach i (`seq 1 30`)\                                                
 echo $i\
 end'
 
+### switch to vi-mode
+$ bindkey -v
+// enter command mode with [ESC]
+
+### notes on vi mode (in command mode):
+j,k // next,prev history
+jk, kj // undo changes to line (u does not work)
+
+### switch back to emacs-mode
+$ bindkey -e
