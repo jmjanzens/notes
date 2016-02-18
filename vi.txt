@@ -115,3 +115,7 @@ ESC	/* after a delay, characters will prepend all lines */
 
 ### highlight all id tags (words, any, between double-quotes)
 /id="\w\+"
+
+### avoiding the [ESC] key
+^c // cancels some actions
+^[ // equivalent of esc
