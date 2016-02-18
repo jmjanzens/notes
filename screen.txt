@@ -43,3 +43,6 @@ stuff '<command String>' // shell commands to issue
 $ screen -S <sessionname>
 ^a, :sessionname <mysession> // to rename already running session
 
+### kill unresponsive tab/window
+// select unresponsive tab, and
+^a, :kill
