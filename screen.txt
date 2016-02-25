@@ -46,3 +46,6 @@ $ screen -S <sessionname>
 ### kill unresponsive tab/window
 // select unresponsive tab, and
 ^a, :kill
+
+### specify shell to use for screen session
+$ screen -s <shell>
