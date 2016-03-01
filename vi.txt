@@ -119,3 +119,8 @@ ESC	/* after a delay, characters will prepend all lines */
 ### avoiding the [ESC] key
 ^c // cancels some actions
 ^[ // equivalent of esc
+
+### toggle line wrap
+: set wrap! // disable
+: set wrap  // enable
+
