@@ -124,6 +124,8 @@ $ g gc
 git log --shortstat --author "$1" | grep "files\? changed" | awk '{f+=$1; i+=$4; d+=$6} END {print "files:", f, "green:", i, "red", d}'
 /* output */ files: 199 green: 5711 red 3019
 
+### stage new files (--intent-to-add)
+$ git add -N
 
 ##################
 ### git theory ###
