@@ -127,6 +127,9 @@ git log --shortstat --author "$1" | grep "files\? changed" | awk '{f+=$1; i+=$4;
 ### stage new files (--intent-to-add)
 $ git add -N
 
+### stash untracked (??) files
+$ git stash save -u "some meaningful description"
+
 ##################
 ### git theory ###
 ##################
