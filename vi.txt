@@ -124,3 +124,7 @@ ESC	/* after a delay, characters will prepend all lines */
 : set wrap! // disable
 : set wrap  // enable
 
+### reload vimrc without exiting editor
+: source ~/.vimrc // OR ...
+: source $MYVIMRC
+
