@@ -1,0 +1,27 @@
+###
+### NOTES: 
+###     iptables only responds to commands of root user;
+###     iptables changes are ephemeral, and must be committed
+###     with the `iptables-save' command, or set to run
+###     at command (see /etc/rc.local);
+###
+###
+
+### to list rules:
+    iptables --table nat --list --verbose --numeric
+ OR
+    iptables -t nat -L [-v] [-n]
+
+### to list rules by spec:
+    iptables --list-rules
+ OR for specific:
+    iptables -S [pattern]
+
+### to delete a rule/chain:
+    iptables --delete PREROUTING <1-9>
+ OR
+    iptables -D [RULE] <1-9>
+ THEN
+    iptables [-t <table>] -L
+ to view updates before saving
+
