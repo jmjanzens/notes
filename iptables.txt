@@ -3,7 +3,7 @@
 ###     iptables only responds to commands of root user;
 ###     iptables changes are ephemeral, and must be committed
 ###     with the `iptables-save' command, or set to run
-###     at command (see /etc/rc.local);
+###     at system start (see /etc/rc.local);
 ###
 ###
 
