@@ -130,6 +130,9 @@ $ git add -N
 ### stash untracked (??) files
 $ git stash save -u "some meaningful description"
 
+### init & update submodules when cloning
+$ git clone --recursive <repo>
+
 ##################
 ### git theory ###
 ##################
