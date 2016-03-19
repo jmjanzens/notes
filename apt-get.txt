@@ -1,4 +1,0 @@
-sudo apt-get install <package>
-
-//if not found, run:
-sudo apt-get update
