@@ -128,3 +128,5 @@ ESC	/* after a delay, characters will prepend all lines */
 : source ~/.vimrc // OR ...
 : source $MYVIMRC
 
+### run colo test (newer versions)
+: runtime syntax/colortest.vim
