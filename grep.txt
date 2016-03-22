@@ -31,3 +31,6 @@ $ watch 'netstat -i|grep wlan0'
 
 ### reverse diff between two files
 $ grep -F[x]f a b --color
+
+### return last word in line
+ls -l | grep -E '[^ ]+$'
