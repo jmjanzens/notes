@@ -64,6 +64,9 @@ $ git config --global core.excludesfile ~/.gitignore
 $ git diff brancha..branchb //tips of both branches
 $ git diff brancha...branchb //diff from common ancestor
 
+### adjust number of lines shown around diff or log patch
+$ git log -p --unified=N // 3 = default, 0 = only the line(s) affected
+
 ### change un-pushed commit message
 $ git commit --amend
 
