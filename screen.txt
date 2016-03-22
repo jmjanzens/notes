@@ -49,3 +49,6 @@ $ screen -S <sessionname>
 
 ### specify shell to use for screen session
 $ screen -s <shell>
+
+### receive alert (bell) on any activity in a specific window
+^a, M
