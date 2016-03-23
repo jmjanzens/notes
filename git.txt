@@ -87,6 +87,10 @@ git stash
 git reset --hard 0d1d7fc32
 git stash pop
 
+### revert pushed commit on remote
+$ git reset --hard HEAD~1       // num commits back, or once for ea commit
+$ git push origin HEAD --force  // remove num commit from remote as well
+
 ### unstage (undo add) files
 $ git reset HEAD file.ext
 
