@@ -130,3 +130,7 @@ ESC	/* after a delay, characters will prepend all lines */
 
 ### run colo test (newer versions)
 : runtime syntax/colortest.vim
+
+### substitute a pattern for a specific line
+: [num] s/from/to/g
+
