@@ -1,4 +1,4 @@
-	### initialize a submodule (i.e. sparq-[vu]/sparq-common)
+### initialize a submodule (i.e. sparq-[vu]/sparq-common)
 $ cd <root dir> //e.g. sparq-linq
 $ git submodule init
 $ git submodule update
@@ -51,6 +51,11 @@ $ git stash list //list of stashes
 $ git stash apply 'stash@{num}' //recover this stash and keep it in list
 $ git stash pop 'stash@{num}' //recover this stash and remove from list
 $ git stash drop 'stash@{num}' //remove stash from list
+
+### git commit with message
+$ git commit -m '...'
+OR
+$ git -F- <<EOF ... EOF
 
 ### show git diff AFTER staging file
 $ git diff --cached file.ext
