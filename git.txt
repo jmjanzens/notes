@@ -102,6 +102,9 @@ $ git reset HEAD file.ext
 ### git merge tool (vimdiff splits highlighting)
 $ git mergetool
 
+### revert an entire merge (but keep history)
+$ git revert -m 1 <SHA of commit that merged>
+
 ### look at file from previous commit
 $ git show HEAD^[:./path/file.xt] // num of ^^^s == how many commits back
 // OR
