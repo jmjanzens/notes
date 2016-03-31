@@ -75,6 +75,10 @@ $ git log -p --unified=N // 3 = default, 0 = only the line(s) affected
 ### change un-pushed commit message
 $ git commit --amend
 
+### add missing file to preview commit
+// stage missing file(s), then
+$ git commit --emend -C HEAD
+
 ### very simple log output
 $ git log --pretty=oneline
 // or for just the first few digits of the revision numbers
