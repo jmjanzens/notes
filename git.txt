@@ -84,6 +84,10 @@ $ git log --pretty=oneline
 // or for just the first few digits of the revision numbers
 $ git log --oneline
 
+### view path/name of all files in a given commit
+$ git diff-tree --no-commit-id --name-only -r <SHA>
+// can be paired powerfully; eg with: "$ vi `!!`"
+
 ### revert last commit, preserving local changes
 $ git reset --soft HEAD~1
 // the below has been tested - the method above has not.
