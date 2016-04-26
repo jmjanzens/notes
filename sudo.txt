@@ -1,0 +1,3 @@
+### if common packages (cd, ls) not available
+$ sudo -i
+

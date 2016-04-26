@@ -1,0 +1,5 @@
+### find a file
+$ sudo find / -name linq-app\*
+
+### find a directory
+$ find /home/jmjanzen -name 'node_modules' -type d

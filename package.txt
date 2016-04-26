@@ -1,0 +1,16 @@
+### 'install' a repo package
+clone it, 
+cd to it,
+cd to b/,
+../configure --<flags(s)> && make package
+
+// NB: if a test fails at end, <package>.deb will NOT be generated !
+
+// scp to dev machine if needed
+
+dpkg -i <package>.deb
+
+### concept ###
+/opt/[sparq] should always be clean (production concept), so no debug text,
+and no file removal (exception: a package manager (
+i.e. apt-get remove <package>).

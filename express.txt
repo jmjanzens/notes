@@ -1,0 +1,12 @@
+# start express project
+$ express [opts]
+$ npm install //add local node_modules
+$ npm start   // listen on express: http://localhost:3000/
+
+# if 'express' command not found
+$ npm install -g express-generator
+
+# to add deps
+modify items under "dependencies" in package.json, then run
+$ npm install
+

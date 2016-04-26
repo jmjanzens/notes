@@ -1,34 +1,63 @@
-# get on a submodule's branch (i.e. cd dir-main/dir-common)
- 2142  git submodule init
- 2143  git submodule update
- 2144  cd  dir-common/
- 2145  git branch
-
+### initialize a submodule (i.e. sparq-[vu]/sparq-common)
+$ cd <root dir> //e.g. sparq-linq
+$ git submodule init
+$ git submodule update
 //grab it:
- 2146  git checkout master
- 2147  git pull
- 2148  git branch
+$ cd sparq-<submodule>
+$ git checkout master
+$ git pull
 
-//view 'remote' branches:
- 2149  git branch -r
+### check connection, security to git
+ssh -[v]T git@github.com
 
-//follow will sync up with branch named 'validate':
- 2150  git checkout -b validate origin/validate
- 2151  git status
- 2152  git branch
- 2153  git pull
+### turn on ssh-agent
+eval `ssh-agent -s` //bash
+eval `ssh-agent -c` //[t]csh
 
-# show log WITH code affected
+### if trouble: " WARNING: UNPROTECTED PRIVATE KEY FILE!"
+$ chmod 400 ~/.ssh/id_rsa.pub //chg permissions
+$  ssh-add ~/.ssh/id_rsa.pub //try again
+
+### view 'remote' branches:
+$ git branch -r
+
+### create new remote branch
+$ git checkout -b branchName //create locally
+$ git push <remote-name> <branch-name> //i.e. origin branchName
+$ git push -u // etc, or this, just look it up
+
+### checkout new remote branch
+$ git checkout --track -b origin/<branchName>
+// -b after --track means do NOT create this branch
+
+### sync up with branch named 'validate':
+$ git checkout -b validate origin/validate
+$ git status
+$ git branch
+$ git pull
+
+### show log WITH code affected
 $ git log -p
 
-# git stash basic
+### make log file from output (with colours)
+: s <newFile>
+
+### show log of branch only
+$ git log master..
+
+### git stash basic
 $ git stash //make a stash of index (0 + num of stashes)
 $ git stash list //list of stashes
 $ git stash apply 'stash@{num}' //recover this stash and keep it in list
 $ git stash pop 'stash@{num}' //recover this stash and remove from list
 $ git stash drop 'stash@{num}' //remove stash from list
 
-# show git diff AFTER staging file
+### git commit with message
+$ git commit -m '...'
+OR
+$ git -F- <<EOF ... EOF
+
+### show git diff AFTER staging file
 $ git diff --cached file.ext
 
 ### to hide certain files in git status
@@ -40,28 +69,111 @@ $ git config --global core.excludesfile ~/.gitignore
 $ git diff brancha..branchb //tips of both branches
 $ git diff brancha...branchb //diff from common ancestor
 
+### adjust number of lines shown around diff or log patch
+$ git log -p --unified=N // 3 = default, 0 = only the line(s) affected
+
 ### change un-pushed commit message
 $ git commit --amend
 
+### add missing file to preview commit
+// stage missing file(s), then
+$ git commit --emend -C HEAD
+
 ### very simple log output
 $ git log --pretty=oneline
+// or for just the first few digits of the revision numbers
+$ git log --oneline
+
+### view path/name of all files in a given commit
+$ git diff-tree --no-commit-id --name-only -r <SHA>
+// can be paired powerfully; eg with: "$ vi `!!`"
 
 ### revert last commit, preserving local changes
 $ git reset --soft HEAD~1
-
 // the below has been tested - the method above has not.
-# to restore a previous commit
-# This will destroy any local modifications.
-# Don't do it if you have uncommitted work you want to keep.
-git reset --hard [commit id]
-
-# Alternatively, if there's work to keep:
+# to restore a previous commit					#
+# This will destroy any local modifications.			#
+# Don't do it if you have uncommitted work you want to keep.	#
+git reset --hard 0d1d7fc32
+// Alternatively, if there's work to keep:
 git stash
-git reset --hard [commit id]
+git reset --hard 0d1d7fc32
 git stash pop
+
+### revert pushed commit on remote
+$ git reset --hard HEAD~1       // num commits back, or once for ea commit
+$ git push origin HEAD --force  // remove num commit from remote as well
 
 ### unstage (undo add) files
 $ git reset HEAD file.ext
 
 ### git merge tool (vimdiff splits highlighting)
 $ git mergetool
+
+### revert an entire merge (but keep history)
+$ git revert -m 1 <SHA of commit that merged>
+
+### look at file from previous commit
+$ git show HEAD^[:./path/file.xt] // num of ^^^s == how many commits back
+// OR
+$ git checkout master~2 [file.xt] //~[n] number of commits back
+
+### fetch status of branches without merging or pulling
+$ git remote -v update
+
+### back out a pushed commit to origin/master
+$ git revert HEAD[~[num]] //[num] number of commits back, empty for previous commit
+
+### rebase branch with master (update just branch to currect master)
+/* DO NOT ISSUE WHILE ON PUBLIC BRANCHES (i.e. origin/, master) */
+$ git fetch
+$ git rebase origin/master
+$ git pull //if behind any
+$ git push //will push changes from master into branch
+//branch is now up-to-date with master!
+
+### show entire file in diff
+$ git diff --no-prefix -U1000
+
+### stash only particular file(s)
+$ git stash -p // enter '?' for help
+
+### show size of repo
+$ du -sh .git
+# optimise du with
+$ g gc
+
+### show total contributions of an author
+git log --shortstat --author "$1" | grep "files\? changed" | awk '{f+=$1; i+=$4; d+=$6} END {print "files:", f, "green:", i, "red", d}'
+/* output */ files: 199 green: 5711 red 3019
+
+### stage new files (--intent-to-add)
+$ git add -N
+
+### stash untracked (??) files
+$ git stash save -u "some meaningful description"
+
+### init & update submodules when cloning
+$ git clone --recursive <repo>
+
+##################
+### git theory ###
+##################
+
+### committing submodules w/in a repo ("bumping")
+/** 
+ * typically done whenever changes in the submodule are required w/in
+ * their linked repo[s]
+ */
+
+### git merge versus git rebase
+/**
+ * OR 'easy' versus 'clean.'
+ * RULE#1: NEVER use while on PUBLIC branches (i.e. origin/master);
+ *         will effectively move new commit to master INTO branch!!
+ * merge combines forked history of two branches (feature, master)
+ * rebase moves start of feature branch to latest master, rewriting
+ * re-writing the project history by creating new commits in the 
+ * original branch.
+ */
+

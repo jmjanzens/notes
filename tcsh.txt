@@ -11,3 +11,24 @@ $ vim `!!` //opens myfile.txt in vim!
 
 ### expand alias
 ^x, ? // i.e. Ctrl+x, Shift+/
+
+### csh foreach loop (like for loop in bash)
+foreach i (`seq 1 5`)
+echo $i
+end
+
+### alias foreach loop
+alias f 'foreach i (`seq 1 30`)\                                                                                                                                                                            echo $i\                                                                                                                                                                                                                                        end'
+echo $i\
+end'
+
+### switch to vi-mode
+$ bindkey -v
+// enter command mode with [ESC]
+
+### notes on vi mode (in command mode):
+j,k // next,prev history
+jk, kj // undo changes to line (u does not work)
+
+### switch back to emacs-mode
+$ bindkey -e

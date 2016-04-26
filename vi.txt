@@ -3,24 +3,24 @@ $ which vim //locate dir where vim is installed
 $ echo "export EDITOR=/usr/bin/vim" >> ~/.[SHELL]rc
 $ echo "export VISUAL=/usr/bin/vim" >> ~/.[SHELL]rc
 
-# GOTO line n
+### GOTO line n
 Shift+G, 666 //jumps cursor to line number 666
 
-# show complete path to current file
+### show complete path to current file
 :echo expand('%:p')
 
-# show partial path from within vi
+### show partial path from within vi
 Ctrl+g
 
-# to add permanent startup settings
+### to add permanent startup settings
 $ vi /home/<user>/.vimrc //create if not exists!
-	// examples 'colorscheme elflord\nset number', etc.
+	// examples 'colorscheme elflord', 'set number', etc.
 
-# paste from clipboard
+### paste from clipboard
 insert-mode: Ctrl+Shift+v //in gnome-terminal
 or right-click paste-menu in other // also from insert-mode
 
-# to show/hide line numbers
+### to show/hide line numbers
 :set nu
 :set nu!
 
@@ -36,6 +36,11 @@ or right-click paste-menu in other // also from insert-mode
 ### adjusting width of vertical split
 ^w, [< || >] // one char
 [NUM], ^w, [< || >] // NUM chars
+:resize [NUM]
+:vertical resize [NUM]
+
+### automatically resize splits to equal dimensions
+^w, =
 
 ### jump to opposing bracket
 % // i.e. Shift+5
@@ -58,7 +63,7 @@ q, l //'l' = letter from a-z
 ctrl+v, [TAB] //good for m4s
 
 ### to refresh edits of file exterior to vim session (e.g. git merge)
-:edit //re-opens present file when used without arguments
+:edit, :e //re-opens present file when used without arguments
 :set autoread // in .vimrc makes Vim auto-refresh
 
 ### different visual modes
@@ -70,8 +75,62 @@ shift+v	// visual line !
 (from Insert mode)
 ^x, TAB
 
-### code folding
+### code folding (set foldmethod=syntax)
 zc //close fold
 zo //open fold
 zM //close all folds
 zR //open all folds
+
+### code folding (set foldmethod=manual)
+zf //fold from here to next command
+visual mode, then zf (eg. shift+v, select lines, zf; fold selected lines)!
+zo //open lines under cursor
+
+### comment-out multiple lines
+^r 	/* block comment */
+	/* select all lines */
+I	/* i.e. Shift+i */
+//	/* desired characters (#, ", //, etc) */
+ESC	/* after a delay, characters will prepend all lines */
+
+### highlight characters in columns > 80
+:2mat ErrorMsg '\%81v.' // or Boolean, or whatever, instead of ErrorMsg
+
+### change highlight colour of element
+:hi <Comment> cterm<f|b>g=<n|str> // i.e. ":hi Conditional ctermbg=white"
+	// fg = foreground colour
+	// bg = background colour
+	// replace 'cterm' with 'gui' for non-terminal
+	// n  = 0-255
+	// str= red, green, blue, etc...
+
+### browse element names
+:hi <TAB>
+
+### force syntax highlighting on files with weird extensions
+:set syntax=<html|javascript|other>
+
+### count wc of found word/pattern in doc
+:%s/\id=//gn
+
+### highlight all id tags (words, any, between double-quotes)
+/id="\w\+"
+
+### avoiding the [ESC] key
+^c // cancels some actions
+^[ // equivalent of esc
+
+### toggle line wrap
+: set wrap! // disable
+: set wrap  // enable
+
+### reload vimrc without exiting editor
+: source ~/.vimrc // OR ...
+: source $MYVIMRC
+
+### run colo test (newer versions)
+: runtime syntax/colortest.vim
+
+### substitute a pattern for a specific line
+: [num] s/from/to/g
+

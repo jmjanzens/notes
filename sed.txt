@@ -1,0 +1,6 @@
+### rewrite multiple files
+$ sed -i 's/old/new/g' *.{sh,txt,etc}
+
+### rewrite multiple files (preserve old copies w/ suffix)
+$ sed -i<.suffix> 's/old/new/g' *.{sh,txt,etc}
+

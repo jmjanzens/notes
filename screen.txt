@@ -20,5 +20,44 @@ $ screen -wipe
 ### to rename current window
 ^a, A // Ctrl+a, Shift+a
 
-### to move left-right through screens
-^a, Spacebar; ^a, Backspace
+### re-order window numbers (order)
+^a, :number [n]
+
+### split verically; horizontally (regions)
+^a, |; ^a, S
+
+### switch regions
+^a, TAB
+
+### close current region
+^a, X
+
+### custom screenrc with its own tabs/commands
+to use, bind:   alias some_alias 'screen -c <path/to/.thisrc>'
+chdir <dir to start in>
+screen -t <name> <num> <actions [path/file]>
+select <num> // start session on this screen
+stuff '<command String>' // shell commands to issue
+
+### named sessions
+$ screen -S <sessionname>
+^a, :sessionname <mysession> // to rename already running session
+$ screen -r <sessionname> // to attach to (supports tab complettion)
+
+### connect/attach to latest session
+$ screen -x
+
+### kill unresponsive tab/window
+// select unresponsive tab, and
+^a, :kill
+
+### specify shell to use for screen session
+$ screen -s <shell>
+
+### receive alert (bell) on any activity in a specific window
+^a, M
+
+### refresh (source) screen session from within
+^a ':source $HOME/.screenrc' // use `$HOME' instead of `~' to avoid environment confusion
+
+
