@@ -1,9 +1,3 @@
-# scroll up/down in terminal:
-shift+pageup/pagedown
-
-# list
-$ la //list all shortform
-$ ll //list all with details shortform!
 # tree intricacies
 tree ./ -d // only print directories
 tree ./ -P <file>.<suffix> 	// only print file which match Pattern
