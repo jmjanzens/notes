@@ -1,3 +1,6 @@
+# cp intricacies
+cp -a dir/. ./ // copy directory contents, along with file permissions, references, etc
+
 # tree intricacies
 tree ./ -d // only print directories
 tree ./ -P <file>.<suffix> 	// only print file which match Pattern
