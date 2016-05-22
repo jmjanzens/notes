@@ -32,6 +32,9 @@ $ screen -wipe
 ### close current region
 ^a, X
 
+### close nested screen session
+^a, a, d
+
 ### custom screenrc with its own tabs/commands
 to use, bind:   alias some_alias 'screen -c <path/to/.thisrc>'
 chdir <dir to start in>
