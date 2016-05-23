@@ -57,6 +57,14 @@ $ git commit -m '...'
 OR
 $ git -F- <<EOF ... EOF
 
+### commit only specific hunks
+$ git add --patch
+
+### merge only specific hunks
+$ git merge --squash --no-commit origin/branch
+$ git reset HEAD
+$ git add -p
+
 ### show git diff AFTER staging file
 $ git diff --cached file.ext
 
