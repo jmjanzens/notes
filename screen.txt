@@ -63,4 +63,6 @@ $ screen -s <shell>
 ### refresh (source) screen session from within
 ^a ':source $HOME/.screenrc' // use `$HOME' instead of `~' to avoid environment confusion
 
+### kill a detached screen session
+$ screen -X -S [pid] quit
 
