@@ -39,6 +39,9 @@ $ git pull
 ### show log WITH code affected
 $ git log -p
 
+### output with full colours by default
+$ git config color.ui always
+
 ### make log file from output (with colours)
 : s <newFile>
 
