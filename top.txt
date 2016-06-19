@@ -1,0 +1,29 @@
+### get top help (at runtime)
+    h
+
+### filter by specific user
+    $ top -u ubuntu
+
+### show full paths, parameters on processes
+    $ top c
+# or at runtime
+    c
+
+### sort by CPU utilization (at runtime)
+    P
+
+### sort by MEM utilization (at runtime)
+    M
+
+### highlight column currently sorting by (at runtime)
+    x
+
+### change refresh delay
+    $ top -d [0.0-1.0]      // [min-max]
+# or at runtime
+    d, [N]                  // N=[min-max]
+
+### print and exit (eg. batch mode)
+    $ top -bn [N]           // N= number of iterations (1 or more) to print before exiting
+
+
