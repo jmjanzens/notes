@@ -1,0 +1,13 @@
+### excellent and cogent resource on strace package
+    $ man strace
+
+### trace only specific process
+    # strace -p <pid>
+
+### trace only ops with a file name (open, start, etc...)
+    # strace -e trace=file
+
+### print summary of time, calls, errors
+    # strace -c // only summary
+    # strace -C // print regular output, too
+
