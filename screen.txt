@@ -66,3 +66,6 @@ $ screen -s <shell>
 ### kill a detached screen session
 $ screen -X -S [pid] quit
 
+### kill entire screen session from within
+^a, :quit
+
