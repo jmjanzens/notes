@@ -1,5 +1,5 @@
 ### pstree (display tree of processes)
-    $ ptree
+    $ pstree
 
 ## show command line args
     $ pstree -a
@@ -9,4 +9,20 @@
 
 ## show parent of specified pid
     $ pstree -s <pid>
+
+### cp (copy files)
+
+##  copy directory contents, along with file permissions, references, etc
+    $ cp -a dir/. ./
+
+### tree (GNU, show directory tree)
+
+## only print directories
+    $ tree ./ -d
+
+## only print files which match Pattern
+    $ tree ./ -P <file>.<suffix>
+
+## show full path of files
+    $ tree -f
 
