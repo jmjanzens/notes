@@ -1,12 +1,12 @@
 ### pstree (display tree of processes)
     $ ptree
 
-### show command line args
+## show command line args
     $ pstree -a
 
-### show pids, gpids (disable child compaction)
+## show pids, gpids (disable child compaction)
     $ pstree -[p,g]
 
-### show parent of specified pid
+## show parent of specified pid
     $ pstree -s <pid>
 
