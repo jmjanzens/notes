@@ -17,6 +17,9 @@
  OR for specific:
     iptables -S [pattern]
 
+### to reroute from default HTTP (example):
+    iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 6060
+
 ### to delete a rule/chain:
     iptables --delete PREROUTING <1-9>
  OR
@@ -24,4 +27,10 @@
  THEN
     iptables [-t <table>] -L
  to view updates before saving
+
+### save iptables:
+    iptables-save [ > iptables.dat ]
+
+### restore iptables:
+    iptables-restore < iptables.dat
 
