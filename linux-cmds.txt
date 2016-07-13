@@ -9,6 +9,9 @@
 
 ## show parent of specified pid
     $ pstree -s <pid>
+    
+## highlight given pid
+    $ pstree -H <pid>
 
 ### cp (copy files)
 
