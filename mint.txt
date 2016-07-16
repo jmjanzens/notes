@@ -1,0 +1,12 @@
+###
+### Linux Mint distro notes
+###
+
+### terminal notes
+
+## make text smaller
+    ^+-
+
+## restore text size
+    ^+Shift+\+
+
