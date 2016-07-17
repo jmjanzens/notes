@@ -1,0 +1,10 @@
+### tmux (terminal multiplexer)
+    $ tmux
+
+### commands from within session (GNU screen like tmux.conf overrides usual command key with `^a'
+
+## open horizontal split to shell
+    ^a, |
+## close it
+    ^d
+
