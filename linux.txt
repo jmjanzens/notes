@@ -17,8 +17,7 @@ $ sh
 > tcsh // or bash, etc.
 
 ### to switch shells automatically on next startup
-$ chsh //change shell
-> /bin/tcsh //path to shell
+$ sudo chsh -s $(which <SHELL>) <user>
 
 #to clear current command line
 Ctrl+u //clears
