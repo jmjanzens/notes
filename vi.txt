@@ -95,6 +95,11 @@ I	/* i.e. Shift+i */
 //	/* desired characters (#, ", //, etc) */
 ESC	/* after a delay, characters will prepend all lines */
 
+### find seek to char
+f [char]
+### find seek to just before char
+t [char]
+
 ### highlight characters in columns > 80
 :2mat ErrorMsg '\%81v.' // or Boolean, or whatever, instead of ErrorMsg
 
