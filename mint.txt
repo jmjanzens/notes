@@ -1,0 +1,7 @@
+###
+### Linux Mint Ubuntu Distro 
+###
+
+### Alt-Tab while using TeamViewer
+    Alt+Meta+Tab
+
