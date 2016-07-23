@@ -7,7 +7,7 @@
 ## make text smaller
     ^+-
 
-## restore text size
+## restore text larger
     ^+Shift+\+
 
 ### TeamViewer on Mint notes
