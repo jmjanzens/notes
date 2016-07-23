@@ -2,7 +2,7 @@
 ### Linux Mint Ubuntu Distro 
 ###
 
-### terminal notes
+### xterm notes
 
 ## make text smaller
     ^+-
