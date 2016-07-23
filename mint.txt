@@ -1,5 +1,5 @@
 ###
-### Linux Mint distro notes
+### Linux Mint Ubuntu Distro 
 ###
 
 ### terminal notes
@@ -9,4 +9,9 @@
 
 ## restore text size
     ^+Shift+\+
+
+### TeamViewer on Mint notes
+
+## Alt-Tab while using TeamViewer
+    Alt+Cmd+Tab
 
