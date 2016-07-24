@@ -9,4 +9,8 @@
     ^a, h
 ## close pane (just exit shell)
     ^d
+## navigate between panes
+    ^a, (arrow-key) // ew
+## go back to prev pane
+    ^a, ;
 
