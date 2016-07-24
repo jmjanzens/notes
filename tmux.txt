@@ -3,10 +3,10 @@
 
 ### commands from within session (GNU screen like tmux.conf overrides usual command key with `^a'
 
-## open vertical split to shell
+## open vertical pane to shell
     ^a, |
-## open horizontal split to shell
+## open horizontal pane to shell
     ^a, h
-## close split (just exit shell)
+## close pane (just exit shell)
     ^d
 
