@@ -141,3 +141,6 @@ t [char]
 ### substitute a pattern for a specific line
 : [num] s/from/to/g
 
+### view all 'named' registers
+: reg
+
