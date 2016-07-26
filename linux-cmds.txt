@@ -35,3 +35,12 @@
 ## show full path of files
     $ tree -f
 
+### setxkbmap (XKB register hack keymap CLI)
+    $ setxkbmap
+
+## example (swap CAPS/ESC)
+    $ setxkbmap -option caps:swapescape
+
+## view present keymap, etc
+    $ setxkbmap -print -v
+
