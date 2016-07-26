@@ -15,3 +15,17 @@
 ## Alt-Tab while using TeamViewer
     Alt+Cmd+Tab
 
+## cycle through ttys
+    ^+Alt+[F1-6]
+
+## quick switch between ttys
+    Alt+[<-.->]
+
+## about ttys 7 and 8 (Mint specific)
+    tty7 - upstart, launches Xorg, and occasionally hangs
+    tty8 - Cinnamon (GUI)
+
+## difference between tty & pts
+    tty  - a regular terminal device
+    pts  - a psuedo terminal (xterm or ssh connection)
+
