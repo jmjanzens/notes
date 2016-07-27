@@ -144,3 +144,14 @@ t [char]
 ### view all 'named' registers
 : reg
 
+### marks
+
+## mark location by name (char)
+m[a-zA-Z0-9]
+
+## jump to first non-blank char on marked line
+'[a-zA-Z0-9]
+
+## jump to cursor location on marked line
+`[a-zA-Z0-9]
+
