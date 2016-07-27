@@ -42,5 +42,5 @@
     $ setxkbmap -option caps:swapescape
 
 ## view present keymap, etc
-    $ setxkbmap -print -v
+    $ setxkbmap -print -verbose 10
 
