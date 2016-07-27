@@ -44,3 +44,6 @@
 ## view present keymap, etc
     $ setxkbmap -print -verbose 10
 
+## to reset to default options
+    $ setxkbmap -option
+
