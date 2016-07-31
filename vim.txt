@@ -155,3 +155,9 @@ m[a-zA-Z0-9]
 ## jump to cursor location on marked line
 `[a-zA-Z0-9]
 
+### show all invisible chars
+:set list
+
+## modify inv chars example (see `:help listchars' for more)
+:set list lcs=eol:N,tab:>-,trail:X
+
