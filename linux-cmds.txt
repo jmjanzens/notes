@@ -38,9 +38,15 @@
 ### setxkbmap (XKB register hack keymap CLI)
     $ setxkbmap
 
-## example (swap CAPS/ESC)
+## example 1 (swap CAPS/ESC)
     $ setxkbmap -option caps:swapescape
 
+## example 2 (replace CAPS with ESC)
+    $ setxkbmap -option caps:escape
+
 ## view present keymap, etc
-    $ setxkbmap -print -v
+    $ setxkbmap -print -verbose 10
+
+## to reset to default options
+    $ setxkbmap -option
 
