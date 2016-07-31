@@ -17,6 +17,9 @@ eval `ssh-agent -c` //[t]csh
 ### set up ssh to github repo (basic)
 $ git remote set-url origin git@github.com:jm-janzen/zsh.git
 
+### if remote missing from `git status' (eg: branch...origin/branch)
+$ git push -u
+
 ### if trouble: " WARNING: UNPROTECTED PRIVATE KEY FILE!"
 $ chmod 400 ~/.ssh/id_rsa.pub //chg permissions
 $  ssh-add ~/.ssh/id_rsa.pub //try again
