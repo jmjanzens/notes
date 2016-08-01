@@ -141,6 +141,9 @@ t [char]
 ### substitute a pattern for a specific line
 : [num] s/from/to/g
 
+### demark a certain column
+:set colorcolumn=80 // 0 to turn off
+
 ### view all 'named' registers
 : reg
 
