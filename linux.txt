@@ -120,6 +120,9 @@ $ netstat -i
 	U = Interface is up. 
 */
 
+### change default editor for user
+# update-alternatives --config editor // then enter number from list
+
 
 ### command line tricks ###
 ### cut and paste command line
