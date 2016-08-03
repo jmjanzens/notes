@@ -1,0 +1,5 @@
+### konsole - KDE terminal emulator
+
+## increase, decrease font size
+    ^+\+, ^+-
+
