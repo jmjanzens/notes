@@ -3,8 +3,16 @@
 
 ### commands from within session (GNU screen like tmux.conf overrides usual command key with `^a'
 
-## open horizontal split to shell
+## open vertical pane to shell
     ^a, |
-## close it
+## open horizontal pane to shell
+    ^a, h
+## close pane (just exit shell)
     ^d
+## navigate between panes
+    ^a, (arrow-key) // ew
+## go back to prev pane
+    ^a, ;
+## resize panes
+    ^a, ^(arrow-key)
 

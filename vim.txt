@@ -141,3 +141,26 @@ t [char]
 ### substitute a pattern for a specific line
 : [num] s/from/to/g
 
+### demark a certain column
+:set colorcolumn=80 // 0 to turn off
+
+### view all 'named' registers
+: reg
+
+### marks
+
+## mark location by name (char)
+m[a-zA-Z0-9]
+
+## jump to first non-blank char on marked line
+'[a-zA-Z0-9]
+
+## jump to cursor location on marked line
+`[a-zA-Z0-9]
+
+### show all invisible chars
+:set list
+
+## modify inv chars example (see `:help listchars' for more)
+:set list lcs=eol:N,tab:>-,trail:X
+

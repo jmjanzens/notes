@@ -1,0 +1,8 @@
+### KDE terminal emulator
+
+## increase, decrease terminal height
+    Shift+Alt+[v,^]
+
+## increase, decrease terminal width 
+    Shift+Alt+[->,<-]
+
