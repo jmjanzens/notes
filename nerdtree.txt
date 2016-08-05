@@ -1,5 +1,8 @@
 ### vim project directory "IDE"
 
+## in-application help
+    ? // ? again to hide
+
 ## open in new tab
     t
 ## switch tabs [backward,forward]
