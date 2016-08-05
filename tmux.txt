@@ -19,6 +19,9 @@
 ## swap panes [left,right]
     ^a, [{,}]
 
+## swap windows [to] (from anywhere)
+    ^a, swap-window -t [n]
+
 ## swap windows [from] [to]
     ^a, swap-window -s [n1] -t [n2]
 
