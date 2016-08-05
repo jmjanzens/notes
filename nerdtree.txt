@@ -1,0 +1,7 @@
+### vim project directory "IDE"
+
+## open in new tab
+    t
+## switch tabs [backward,forward]
+    g[T,t]
+
