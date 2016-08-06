@@ -11,6 +11,8 @@
     ^d
 ## navigate between panes
     ^a, (arrow-key) // ew
+## cycle through panes
+    ^a, (tab)
 ## go back to prev pane
     ^a, ;
 ## resize panes
