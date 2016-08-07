@@ -183,3 +183,18 @@ that would resolve to a list of files
 :args `find . -type f`                  // load all files from `:!pwd`
 :args `find . -type f -iname \*.jsx`    // load all jsx file
 
+### vimgrep (search for {pattern} in {file(s)}
+:vim[grep][!] /{pattern}/[g][j] {file}
+
+## vimgrep list of files
+:vimgrep /React/ *.jsx
+
+## jump back and forth in results list
+# optionally jump to (N of [0-N])
+:cn[ext][N], :cp[prev][N]   // can jump between files in arglist
+
+## search same file glob as before
+:vimgrep /React/ ##
+
+## repeat previous search
+:vimgrep /<^+r,/>/ %
