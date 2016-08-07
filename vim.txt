@@ -164,3 +164,22 @@ m[a-zA-Z0-9]
 ## modify inv chars example (see `:help listchars' for more)
 :set list lcs=eol:N,tab:>-,trail:X
 
+### arglist
+A subset of the buffer which contains,
+by default, file arguments passed when
+launching vim (eg. `vi a.txt b.txt`) but
+can be passed almost any shell expression
+that would resolve to a list of files
+
+## view args
+:ar[gs] // [/home/jm/notes/vim.txt]
+
+## jump between files in arglist
+:n[ext], :p[rev]
+
+## set contents of arglist
+:args {arglist}
+# examples
+:args `find . -type f`                  // load all files from `:!pwd`
+:args `find . -type f -iname \*.jsx`    // load all jsx file
+
