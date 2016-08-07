@@ -27,3 +27,17 @@
 ## swap windows [from] [to]
     ^a, swap-window -s [n1] -t [n2]
 
+## set {copy,scroll} mode keys
+    :set-window-option mode-keys {vi,emacs}
+
+## copy mode (vi-mode)
+    ^a, PgUp
+
+## scroll mode (vi-mode)
+    ^a, [
+
+## copy (vi-mode)
+    (space), (move cursor), (enter)
+
+## paste (from vi insert-mode)
+    ^a, ]
