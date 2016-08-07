@@ -164,6 +164,11 @@ m[a-zA-Z0-9]
 ## modify inv chars example (see `:help listchars' for more)
 :set list lcs=eol:N,tab:>-,trail:X
 
+### highlight current line
+:set cursorline
+### highlight current column
+:set cursorcolumn
+
 ### arglist
 A subset of the buffer which contains,
 by default, file arguments passed when
