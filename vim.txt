@@ -203,3 +203,15 @@ that would resolve to a list of files
 
 ## repeat previous search
 :vimgrep /<^+r,/>/ %
+
+## list 'Quick List' of all matches across files
+:lw[indow]
+
+## list and allow navigation to selected matches
+:cw[indow] [height] // height = result lines to show
+
+## list all matches in current file
+:g//p // p[rint] is default, so not really necessary
+OR
+[I
+
