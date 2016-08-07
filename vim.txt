@@ -210,6 +210,9 @@ that would resolve to a list of files
 ## list and allow navigation to selected matches
 :cw[indow] [height] // height = result lines to show
 
+## can be piped from vimgrep
+:vim /\<pattern\>/ ## |cw
+
 ## list all matches in current file
 :g//p // p[rint] is default, so not really necessary
 OR
