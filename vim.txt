@@ -218,3 +218,7 @@ that would resolve to a list of files
 OR
 [I
 
+### goto to declaration
+g,d // in function
+g,D // in file
+
