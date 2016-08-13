@@ -1,9 +1,8 @@
-### initialize a submodule (i.e. sparq-[vu]/sparq-common)
-$ cd <root dir> //e.g. sparq-linq
-$ git submodule init
-$ git submodule update
-//grab it:
-$ cd sparq-<submodule>
+### initialize a submodule (i.e. sparq-{vu,common})
+$ git submodule update --init --recursive
+
+### grab it
+$ cd <submodules(s)>
 $ git checkout master
 $ git pull
 
