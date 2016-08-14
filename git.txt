@@ -123,6 +123,10 @@ $ git push origin HEAD --force  // remove num commit from remote as well
 ### unstage (undo add) files
 $ git reset HEAD file.ext
 
+### unstage from previous commit
+$ git reset HEAD^ file.ext
+$ git commit --amend
+
 ### git merge tool (vimdiff splits highlighting)
 $ git mergetool
 
