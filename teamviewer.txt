@@ -1,0 +1,6 @@
+## stop teamviewer daemon
+    # teamviewer --daemon stop
+
+## prevent from starting on launch
+    # update-rc.d teamviewerd remove
+
