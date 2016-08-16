@@ -192,7 +192,7 @@ that would resolve to a list of files
 :vim[grep][!] /{pattern}/[g][j] {file}
 
 ## vimgrep list of files
-:vimgrep /React/ *.jsx
+:vimgrep /React/ \*.jsx
 
 ## jump back and forth in results list
 # optionally jump to (N of [0-N])
