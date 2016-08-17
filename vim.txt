@@ -162,6 +162,9 @@ t [char]
 ### view all 'named' registers
 : reg
 
+### paste from register
+"[R]p // where R = char associated with reg
+
 ### marks
 
 ## mark location by name (char)
