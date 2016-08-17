@@ -71,6 +71,16 @@ v 	// normal drag-and-select
 ctrl+v	// visual block
 shift+v	// visual line !
 
+### select to matching XML tag
+v,a,t
+##  pairs powerfully with, y or c
+[c|y]at // to Change, or Yank
+
+### select inner content of XML tag
+v,i,t
+## to toggle cursor loc from bottom/top tag
+o
+
 ### auto complete suggestions !
 (from Insert mode)
 ^x, TAB
