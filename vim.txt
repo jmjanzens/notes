@@ -81,6 +81,11 @@ v,i,t
 ## to toggle cursor loc from bottom/top tag
 o
 
+### enable XML jump-to-matching (builtin plugin)
+:runtime macros/matchit.vim // init
+:filetype detect            // activate
+:help matchit[-install]     // help
+
 ### auto complete suggestions !
 (from Insert mode)
 ^x, TAB
