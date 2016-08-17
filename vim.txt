@@ -240,3 +240,17 @@ OR
 g,d // in function
 g,D // in file
 
+### working with tabs
+
+## open new tab
+:tabnew [filename]
+
+## move tab to i
+:tabm[ove] i
+
+## move tab i positions left
+:tabm -i
+
+## move tab i positions right
+:tabm +i
+
