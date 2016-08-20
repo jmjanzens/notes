@@ -254,3 +254,7 @@ g,D // in file
 ## move tab i positions right
 :tabm +i
 
+### insert file contents below cursor
+:r[ead] ./somefile.ext
+:r !cat ./somefile.ext // equivalent to above
+
