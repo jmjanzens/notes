@@ -1,0 +1,33 @@
+# h1 header
+## h2 header
+### h3 header
+#### h4 header
+##### h5 header
+
+*emphasized* text.
+
+**strong** text.
+
+1. ordered item
+2. ordered item
+    * unordered item
+    * unordered item
+
+> block quote
+> block quote
+> block quote
+
+`one-line code snippet`
+
+```cpp
+/* cpp code snippet */
+int main() {
+    printf("hello world\n");
+}
+
+```
+```js
+// Javascript code snippet
+console.log("hello world");
+```
+

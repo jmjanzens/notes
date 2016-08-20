@@ -1,5 +1,5 @@
 ### excellent and cogent resource on strace package
-    $ man strace
+    $ man strace #asdf
 
 ### trace only specific process
     # strace -p <pid>
