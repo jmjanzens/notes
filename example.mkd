@@ -21,7 +21,7 @@
 
 ```cpp
 /* cpp code snippet */
-int main() {
+int main(int argc, char **argv) {
     printf("hello world\n");
 }
 
@@ -31,3 +31,7 @@ int main() {
 console.log("hello world");
 ```
 
+```sh
+# dash 'code' snippet
+sudo apt-get install {rum,scrum,your-mum}
+```
