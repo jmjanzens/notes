@@ -1,0 +1,31 @@
+# topic title (eg. package, framework, language's name)
+## Summary:
+    Brief outline of what the topic is / what it does.
+    (Eg. "List contents of a directory in a tree-like format").
+## Usage:
+    If applicable, show base usage (eg. `tree [opts] [dir]`.
+## Description:
+    Describe this topic file's purpose.
+
+---
+
+### specific case of the topic ###
+```sh
+# example usage for this case, eg:
+$ sudo apt-get install tree
+```
+
+### generic case of the topic ###
+~~~
+# this case is a generic snippet
+$ sudo apt-get install tree
+~~~
+
+### discussion case of the topic ###
+> Usage a block quote to discuss a case that does not involve mostly syntax,
+> Remember to break lines longer than 80 chars!
+
+## References:
+    Useful help resources for this topic (eg. man pages, official
+    and unofficial web references).
+
