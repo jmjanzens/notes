@@ -1,0 +1,22 @@
+# topic title (eg. concept, language, package, etc)
+## Summary:
+Brief outline of what the topic is / what it does.
+(Eg. "the stupid content tracker").
+
+## Description:
+Describe this topic file's purpose.
+
+---
+
+### case of the topic ###
+~~~sh
+# this case is a generic snippet
+$ git add --patch . # hack, hack, hack...
+~~~
+> After an example, go into more detail using a block quote to discuss
+> this case more depth, but just remember to break lines longer than 80 chars!
+
+## References:
+    Useful learning resources for this topic (eg. man pages, official
+    and unofficial web references). `man git-add` then `/ --patch`.
+
