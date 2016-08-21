@@ -1,0 +1,34 @@
+# ExpressJS
+## Summary:
+Fast, unopinionated, minimalist web framework for NodeJS.
+
+## Usage:
+```bash
+$ express [opts]
+```
+
+## Description:
+How to start a dead-simple web project with custom dependencies.
+
+---
+
+### start express project ###
+```bash
+$ npm install # add local node_modules
+$ npm start   # listen on express: http://localhost:3000/
+```
+
+### if 'express' command not found ###
+```bash
+$ npm install -g express-generator
+```
+
+### to add deps ###
+```bash
+# modify items under "dependencies" in package.json, then run
+$ npm install
+```
+
+## References:
+* Official README: https://github.com/expressjs/express/blob/master/Readme.md
+
