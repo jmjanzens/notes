@@ -1,5 +1,25 @@
-### find a file
-$ sudo find / -name linq-app\*
+# find
 
-### find a directory
+## Summary:
+GNU package to search directory tree
+
+## Usage:
+```bash
+$ find [path] [opts] [pattern]
+```
+
+## Description:
+Some simple examples of how to use find.
+
+### find a file (case sensitive) ###
+```bash
+$ sudo find / -name linq-app\*
+```
+
+### find a directory ###
+```bash
 $ find /home/jmjanzen -name 'node_modules' -type d
+```
+
+## References:
+* `man find`
