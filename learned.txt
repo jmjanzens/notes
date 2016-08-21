@@ -1,106 +1,104 @@
-###########################
-### things I've learned ###
-###########################
+# things I've learned
 
-### general
-  ->  MVCC
-      ->  
-  ->  typing
-      ->  dynamic typing
-      ->  strict typing
-      ->  Duck typing
-  ->  CORS
-  ->  env, sub shell env, and preserving env (e.g. sudo -E)
-  ->  test and implement new and imported modules
-  ->  report writing, spec writing
+### general ###
+  *  MVCC
+      *  
+  *  typing
+      *  dynamic typing
+      *  strict typing
+      *  Duck typing
+  *  CORS
+  *  env, sub shell env, and preserving env (e.g. sudo -E)
+  *  test and implement new and imported modules
+  *  report writing, spec writing
 
-### javascript
-  ->  callbacks
-  ->  scope, binding
-  ->  module creation, implementation
-  ->  atomic operations
-  ->  interface with foreign modules
-  ->  
-  ->  
-  ->  
-  ->  
+### javascript ###
+  *  callbacks
+  *  scope, binding
+  *  module creation, implementation
+  *  atomic operations
+  *  interface with foreign modules
+  *  
+  *  
+  *  
+  *  
 
-### jQuery
-  ->  jsonp  
-  ->  css, html manipulation
-  ->  use with jsp, jsf, servlets (Java)
-  ->  
+### jQuery ###
+  *  jsonp  
+  *  css, html manipulation
+  *  use with jsp, jsf, servlets (Java)
+  *  
 
-### nodejs
-  ->  asynchronous operations
-  ->  synchronous operation
-      -> and their interaction kernal-level io ops
+### nodejs ###
+  *  asynchronous operations
+  *  synchronous operation
+      * and their interaction kernal-level io ops
 
-### git
-  ->  command-line 
-  ->  web interface
-  ->  creating wikis
-  ->  'commit as unit' philosophy
-  ->  'micro-commit' philosophy
-  ->  submodules
-  ->  common commands:
-      ->  status, log, checkout, diff,
+### git ###
+  *  command-line 
+  *  web interface
+  *  creating wikis
+  *  'commit as unit' philosophy
+  *  'micro-commit' philosophy
+  *  submodules
+  *  common commands:
+      *  status, log, checkout, diff,
           init, clone, push, pull, branch,
           tag, fetch, merge, status, remote,
           config, etc...
-      ->  plus parameters
-  ->  advanced commands:
-      ->  mergetool, --follow, --graph,
+      *  plus parameters
+  *  advanced commands:
+      *  mergetool, --follow, --graph,
           stash, blame, issues, githooks,
           rebase, 
 
-### unix
-  ->  Ubuntu
-  ->  Debian
-  ->  Bourne Again Shell
-  ->  TENEX C Shell (tcsh)
-  ->  scripting
-  ->  environment
-  ->  alias junky
-  ->  common commands, utilities
-    ->  man, ssh, find, grep, diff, 
-  ->  advanced commands, utilities
-    ->  scp
-  ->  gnu screen addict
-    ->  custom rc, shortcuts
-    ->  excellent workflow
+### unix ###
+  *  Ubuntu
+  *  Debian
+  *  Bourne Again Shell
+  *  TENEX C Shell (tcsh)
+  *  scripting
+  *  environment
+  *  alias junky
+  *  common commands, utilities
+    *  man, ssh, find, grep, diff, 
+  *  advanced commands, utilities
+    *  scp
+  *  gnu screen addict
+    *  custom rc, shortcuts
+    *  excellent workflow
 
 
-### scripting
-  ->  BASH, CSH (BASH makes me hate my life less)
-  ->  C/C++ scripting (navpad)
-  ->  from command line (e.g. bash -c "while true; do git pull; done")
-  ->  from file to alias (.myscripts/*)
-  ->  variety of useful rc files
+### scripting ###
+  *  BASH, CSH (BASH makes me hate my life less)
+  *  C/C++ scripting (navpad)
+  *  from command line (e.g. bash -c "while true; do git pull; done")
+  *  from file to alias (.myscripts/*)
+  *  variety of useful rc files
 
-### GNU autotest
-  ->  create and modify testsuite
-  ->  create and modify testgroups
-  ->  create and modify test drivers
+### GNU autotest ###
+  *  create and modify testsuite
+  *  create and modify testgroups
+  *  create and modify test drivers
 
-### vi
-  ->  intermediate user
-  ->  customization
-  ->  love:wq
+### vi ###
+  *  intermediate user
+  *  customization
+  *  love:wq
 
-### noSQL (couchDB)
-  ->  created CLI to create, drop, view, etc
-  ->  "documents" are cool b/c JSON is dope
-  ->  
+### noSQL (couchDB) ###
+  *  created CLI to create, drop, view, etc
+  *  "documents" are cool b/c JSON is dope
+  *  
 
-### FPGAs
-  ->  BeagleBone Black + Zigbee cape + stripped-down ubuntu kernel
-  ->  hardware and software debuggers
-  ->  LED control module
-  ->  wireless setup (broadcast, node, node-switching)
-  ->  
-  ->  
+### FPGAs ###
+  *  BeagleBone Black + Zigbee cape + stripped-down ubuntu kernel
+  *  hardware and software debuggers
+  *  LED control module
+  *  wireless setup (broadcast, node, node-switching)
+  *  
+  *  
 
-### regular expressions
-  ->  egrep, fgrep
-  ->  implementation in various languages
+### regular expressions ###
+  *  egrep, fgrep
+  *  implementation in various languages
