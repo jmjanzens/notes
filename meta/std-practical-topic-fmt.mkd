@@ -1,11 +1,13 @@
 # topic title (eg. package, framework, language's name)
 ## Summary:
-    Brief outline of what the topic is / what it does.
-    (Eg. "List contents of a directory in a tree-like format").
+Brief outline of what the topic is / what it does.
+(Eg. "List contents of a directory in a tree-like format").
+
 ## Usage:
-    If applicable, show base usage (eg. `tree [opts] [dir]`.
+If applicable, show base usage (eg. `tree [opts] [dir]`.
+
 ## Description:
-    Describe this topic file's purpose.
+Describe this topic file's purpose.
 
 ---
 
@@ -22,7 +24,7 @@ $ sudo apt-get install tree
 ~~~
 
 ### discussion case of the topic ###
-> Usage a block quote to discuss a case that does not involve mostly syntax,
+> Use a block quote to discuss a case that does not involve mostly syntax,
 > Remember to break lines longer than 80 chars!
 
 ## References:
