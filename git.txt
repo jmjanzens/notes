@@ -176,6 +176,9 @@ $ git stash save -u "some meaningful description"
 ### init & update submodules when cloning
 $ git clone --recursive <repo>
 
+### clone only current, without history
+$ git clone --depth=1 [repo-url]
+
 ##################
 ### git theory ###
 ##################
