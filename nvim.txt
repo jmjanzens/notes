@@ -1,5 +1,17 @@
-### neovim setup from vim
-$ mkdir -p ~/.config/nvim       // if $XDG_CONFIG_HOME is not set
+# neovim
+## Summary:
+A fork of vim that might actually be something.
+
+## Usage:
+nvim [opts...] [arglist]
+
+## Description:
+Commands unique to neovim, other idiosyncracies not shared with vim
+
+### simple neovim setup from vim ###
+```sh
+$ mkdir -p ~/.config/nvim                   # if $XDG_CONFIG_HOME is not set
 $ ln -s ~/.vim/* ~/.config/nvim/
 $ ln -s ~/.vimrc ~/.config/nvim/init.vim
+```
 
