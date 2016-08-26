@@ -1,13 +1,31 @@
+# strace
+
+## Summary:
+Trace system calls and signals.
+
+## Description:
+Basic usage of strace for debugging processes at runtime.
+
+---
+
 ### excellent and cogent resource on strace package
+```bash
     $ man strace #asdf
+```
 
 ### trace only specific process
+```bash
     # strace -p <pid>
+```
 
 ### trace only ops with a file name (open, start, etc...)
+```bash
     # strace -e trace=file
+```
 
 ### print summary of time, calls, errors
+```bash
     # strace -c // only summary
     # strace -C // print regular output, too
+```
 
