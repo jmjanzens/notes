@@ -41,6 +41,10 @@ $ git status
 $ git branch
 $ git pull
 
+### delete remote branch
+$ git push origin :branchname
+
+
 ### show log WITH code affected
 $ git log -p
 
