@@ -68,6 +68,11 @@ $ git -F- <<EOF ... EOF
 ### commit only specific hunks
 $ git add --patch
 
+### squash commits in branch before commiting merge
+$ git checkout master           # or branch merging-to
+$ git merge --squash feature    # branch merging from
+$ git commit                    # basically just (git diff feature master)
+
 ### merge only specific hunks
 $ git merge --squash --no-commit origin/branch
 $ git reset HEAD
