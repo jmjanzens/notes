@@ -1,7 +1,13 @@
+# Windows 7+
+
 ### access startup items folder (alternate)
+```
 Run: "shell:startup"
+```
 
 ### access common admin commands (admin prompt, etc)
+```
 Windows+x
+```
 
 
