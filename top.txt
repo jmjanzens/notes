@@ -1,29 +1,47 @@
+# top (ps fork)
+
 ### get top help (at runtime)
+```bash
     h
+```
 
 ### filter by specific user
+```bash
     $ top -u ubuntu
+```
 
 ### show full paths, parameters on processes
+```bash
     $ top c
 # or at runtime
     c
+```
 
 ### sort by CPU utilization (at runtime)
+```bash
     P
+```
 
 ### sort by MEM utilization (at runtime)
+```bash
     M
+```
 
 ### highlight column currently sorting by (at runtime)
+```bash
     x
+```
 
 ### change refresh delay
-    $ top -d [0.0-1.0]      // [min-max]
+```bash
+    $ top -d [0.0-1.0]      # [min-max]
 # or at runtime
-    d, [N]                  // N=[min-max]
+    d, [N]                  # N=[min-max]
+```
 
 ### print and exit (eg. batch mode)
-    $ top -bn [N]           // N= number of iterations (1 or more) to print before exiting
+```bash
+    $ top -bn [N]           # N= number of iterations (1 or more) to print before exiting
+```
 
 
