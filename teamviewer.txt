@@ -1,6 +1,11 @@
-## stop teamviewer daemon
-    # teamviewer --daemon stop
+# Team Viewer 11
+### stop teamviewer daemon
+```bash
+    $ sudo teamviewer --daemon stop
+```
 
-## prevent from starting on launch
-    # update-rc.d teamviewerd remove
+### prevent from starting on launch
+```bash
+    sudo update-rc.d teamviewerd remove
+```
 
