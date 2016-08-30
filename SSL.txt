@@ -1,9 +1,20 @@
+# SSL
+
+---
+
 ###	to view couchdb certificate
-#   first you can view a certificate with the following.
-#   openssl x509 -in couchdb.pem -noout -text
+> first you can view a certificate with the following.
+```bash
+$ sudo openssl x509 -in couchdb.pem -noout -text
+```
 
 ###	to gen new certificate
+```bash
 $ openssl req -new -x509 -nodes -keyout couchdb.key -out couchdb.pem -days 10000
+```
 
 ###	to make *.pem from *.crt & *.key combo
-generate; then cat a.crt a.key > a.pem
+```bash
+# generate; then
+cat a.crt a.key > a.pem
+```
