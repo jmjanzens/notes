@@ -1,15 +1,21 @@
+# sendmail
+
 ### install postfix
 ### uninstall sendmail
 ### configure postfix
 
 ### send mail
+```bash
 sendmail -t you@domain.com -F me@domain.com
 SUBJECT: [subject line goes here]
 [body goes here]
-. // <--<< done
+. # this marks done
+```
 
 ### check inbox (raw)
+```bash
 cat /var/mail/<user>
+```
 
 
 
