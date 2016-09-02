@@ -1,0 +1,9 @@
+# python 3.5
+
+---
+
+### force std io to be unbuffered (useful when using `tee`)
+```bash
+$ py -u code.py | tee off.log
+```
+
