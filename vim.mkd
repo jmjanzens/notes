@@ -71,7 +71,7 @@ or right-click paste-menu in other  # also from insert-mode
 ### jump to opposing bracket
 ```bash
 %       # i.e. Shift+5
-# can be paired powerfully:
+# can be paired powerfully
 =, %    # indents all code w/in brackets
 d, %    # deletes all code w/in brackets
 ```
@@ -98,7 +98,7 @@ ctrl+v, [TAB] # good for m4s
 
 ### to refresh edits of file exterior to vim session (e.g. git merge)
 ```bash
-:edit, :e       # re-opens present file when used without arguments
+:e[dit]         # re-opens present file when used without arguments
 :set autoread   # in .vimrc makes Vim auto-refresh
 ```
 
