@@ -130,6 +130,17 @@ o
 :help matchit[-install]     # help
 ```
 
+### show list of scripts in order they were called
+```bash
+:scriptnames
+# how to read output
+# [script id]: [path to script name]
+# example output
+# 1: /usr/share/vim/vimrc
+# 2: /usr/share/vim/vim74/debian.vim
+# 3: /usr/share/vim/vim74/syntax/syntax.vim
+```
+
 ### auto complete suggestions !
 ```bash
 (from Insert mode)
