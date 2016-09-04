@@ -1,34 +1,55 @@
+# tenex c shell
+
+---
+
+
 ### to search history, like in bourne shell
-bindkey "^R" i-search-back //Ctrl+r and type to search!
+```bash
+bindkey "^R" i-search-back #Ctrl+r and type to search!
+```
 
 ### an excellent list of variables
-https://skynet.ie/~dobrien/Stuff/tcsh.html
+> https:#skynet.ie/~dobrien/Stuff/tcsh.html
 
 ### use output from previous line in command
+```bash
 $ find . -name myfile.txt
 /path/to/myfile.txt
-$ vim `!!` //opens myfile.txt in vim!
+$ vim `!!` #opens myfile.txt in vim!
+```
 
 ### expand alias
-^x, ? // i.e. Ctrl+x, Shift+/
+```bash
+^x, ? # i.e. Ctrl+x, Shift+/
+```
 
 ### csh foreach loop (like for loop in bash)
+```bash
 foreach i (`seq 1 5`)
 echo $i
 end
+```
 
 ### alias foreach loop
+```bash
 alias f 'foreach i (`seq 1 30`)\                                                                                                                                                                            echo $i\                                                                                                                                                                                                                                        end'
 echo $i\
 end'
+```
 
 ### switch to vi-mode
+```bash
 $ bindkey -v
-// enter command mode with [ESC]
+# enter command mode with [ESC]
+```
 
 ### notes on vi mode (in command mode):
-j,k // next,prev history
-jk, kj // undo changes to line (u does not work)
+```bash
+j,k     # next,prev history
+jk, kj  # undo changes to line (u does not work)
+```
 
 ### switch back to emacs-mode
+```bash
 $ bindkey -e
+```

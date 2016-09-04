@@ -1,8 +1,14 @@
-### KDE terminal emulator
+# KDE terminal emulator
 
-## increase, decrease terminal height
+---
+
+### increase, decrease terminal height
+```bash
     Shift+Alt+[v,^]
+```
 
-## increase, decrease terminal width 
+### increase, decrease terminal width 
+```bash
     Shift+Alt+[->,<-]
+```
 

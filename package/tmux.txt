@@ -1,43 +1,66 @@
-### tmux (terminal multiplexer)
+# tmux (terminal multiplexer)
+```bash
     $ tmux
+```
+
+---
 
 ### commands from within session (GNU screen like tmux.conf overrides usual command key with `^a'
 
-## open vertical pane to shell
+### open vertical pane to shell
+```bash
     ^a, |
-## open horizontal pane to shell
+# open horizontal pane to shell
     ^a, h
-## close pane (just exit shell)
+# close pane (just exit shell)
     ^d
-## navigate between panes
+# navigate between panes
     ^a, (arrow-key) // ew
-## cycle through panes
+# cycle through panes
     ^a, (tab)
-## go back to prev pane
+# go back to prev pane
     ^a, ;
-## resize panes
+# resize panes
     ^a, ^(arrow-key)
+```
 
-## swap panes [left,right]
+### swap panes [left,right]
+```bash
     ^a, [{,}]
+```
 
-## swap windows [to] (from anywhere)
+### swap windows [to] (from anywhere)
+```bash
     ^a, swap-window -t [n]
+```
 
-## swap windows [from] [to]
+### swap windows [from] [to]
+```bash
     ^a, swap-window -s [n1] -t [n2]
+```
 
-## set {copy,scroll} mode keys
+### set {copy,scroll} mode keys
+```bash
     :set-window-option mode-keys {vi,emacs}
+```
 
-## copy mode (vi-mode)
+### copy mode (vi-mode)
+```bash
     ^a, PgUp
+```
 
-## scroll mode (vi-mode)
+### scroll mode (vi-mode)
+```bash
     ^a, [
+```
 
-## copy (vi-mode)
+### copy (vi-mode)
+```bash
     (space), (move cursor), (enter)
+```
 
-## paste (from vi insert-mode)
+### paste (from vi insert-mode)
+```bash
     ^a, ]
+```
+
