@@ -43,8 +43,10 @@ $  ssh-add ~/.ssh/id_rsa.pub  # try again
 ```bash
 # create file ~/.ssh/config
 host github.com
+    Port 22 # optional
     HostName github.com
     IdentityFile ~/.ssh/my_github_key
+    IdentityFile ~/.ssh/my_github_key_for_another_repo # will check this, too
     User git
     VisualHostKey=yes # show randomart
 ```
