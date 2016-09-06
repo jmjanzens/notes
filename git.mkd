@@ -39,6 +39,16 @@ $ chmod 400 ~/.ssh/id_rsa.pub # chg permissions
 $  ssh-add ~/.ssh/id_rsa.pub  # try again
 ```
 
+### to specify name key (other than id_rsa)
+```bash
+# create file ~/.ssh/config
+host github.com
+    HostName github.com
+    IdentityFile ~/.ssh/my_github_key
+    User git
+    VisualHostKey=yes # show randomart
+```
+
 ### view 'remote' branches:
 ```bash
 $ git branch -r
