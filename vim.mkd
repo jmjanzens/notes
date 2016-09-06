@@ -164,6 +164,11 @@ zf # fold from here to next command
 zo # open lines under cursor
 ```
 
+### fold on parentheses
+```bash
+zf, %
+```
+
 ### comment-out multiple lines
 ```bash
 ^r 	# block comment
