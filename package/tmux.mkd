@@ -64,3 +64,13 @@
     ^a, ]
 ```
 
+### search forward from copy mode
+```bash
+    ^s
+```
+
+### search backward from copy mode
+```bash
+    ^r
+```
+
