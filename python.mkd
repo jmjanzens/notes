@@ -7,3 +7,7 @@
 $ py -u code.py | tee off.log
 ```
 
+### runtime debugging
+```bash
+$ py -m pdb code.py  # need to install pdb module first
+```
