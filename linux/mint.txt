@@ -1,31 +1,40 @@
-###
-### Linux Mint Ubuntu Distro 
-###
+# Linux Mint Ubuntu Distro
 
-### xterm notes
+---
 
-## make text smaller
+### make text smaller
+```bash
     ^+-
+```
 
-## restore text larger
+### restore text larger
+```bash
     ^+Shift+\+
+```
 
-### TeamViewer on Mint notes
+### about ttys 7 and 8 (Mint specific)
+>   tty7 - upstart, launches Xorg, and occasionally hangs
+>   tty8 - Cinnamon (GUI)
 
-## Alt-Tab while using TeamViewer
+### difference between tty & pts
+>   tty  - a regular terminal device
+>   pts  - a psuedo terminal (xterm or ssh connection)
+
+---
+
+## TeamViewer on Mint notes
+
+### Alt-Tab while using TeamViewer
+```bash
     Alt+Cmd+Tab
+```
 
-## cycle through ttys
+### cycle through ttys
+```bash
     ^+Alt+[F1-6]
+```
 
-## quick switch between ttys
+### quick switch between ttys
+```bash
     Alt+[<-.->]
-
-## about ttys 7 and 8 (Mint specific)
-    tty7 - upstart, launches Xorg, and occasionally hangs
-    tty8 - Cinnamon (GUI)
-
-## difference between tty & pts
-    tty  - a regular terminal device
-    pts  - a psuedo terminal (xterm or ssh connection)
-
+```
