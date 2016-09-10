@@ -1,8 +1,14 @@
-### sed - stream editor
+# sed - stream editor
+
+---
 
 ### rewrite multiple files
+```bash
     $ sed -i 's/old/new/g' *.{sh,txt,etc}
+```
 
 ### rewrite multiple files (preserve old copies w/ suffix)
+```bash
     $ sed -i<.suffix> 's/old/new/g' *.{sh,txt,etc}
+```
 
