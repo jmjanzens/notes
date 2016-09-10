@@ -1,5 +1,9 @@
-### ncurses (new curses)
+# ncurses (new curses)
+
+---
 
 ### install documentation (Debian/Ubuntu)
-# apt-get install ncurses-doc
+```bash
+$ sudo  apt-get install ncurses-doc
+```
 
