@@ -1,8 +1,0 @@
-# Notes on Ubuntu Long-Term Support (>=12.04)
-
-### Resize Window Keyboard shortcut
-```bash
-Alt+F7
-```
-
-
