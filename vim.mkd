@@ -68,6 +68,13 @@ or right-click paste-menu in other  # also from insert-mode
 ^w, =
 ```
 
+### increment numbers (even GNU screen session)
+```bash
+^a      # only works if not overridden
+^a, a   # works even in screen, tmux
+^x      # decrement
+```
+
 ### jump to opposing bracket
 ```bash
 %       # i.e. Shift+5
