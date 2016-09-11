@@ -69,6 +69,18 @@ A generic list of useful Linux commands.
 
 ---
 
+## ln (make links between files)
+
+### overwrite target if exists
+```bash
+    $ ln -sf /usr/bin/nano /usr/bin/vi      # or --symbolic --force
+```
+
+### overwrite target directory if exists
+    $ ln -sfn ~trees/server/views /var/www  # or --symbolic --force --no-dereference
+
+---
+
 ## setxkbmap (XKB register hack keymap CLI)
 ```bash
     $ setxkbmap
