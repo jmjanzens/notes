@@ -222,6 +222,11 @@ t [char]
 :%s/\id=//gn
 ```
 
+### add double-quotes around all keys in *.json file (example)
+```bash
+:%s/\(\w+\)[:]/"\1":/g
+```
+
 ### highlight all id tags (words, any, between double-quotes)
 ```bash
 /id="\w\+"
