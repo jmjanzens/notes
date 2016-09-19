@@ -309,6 +309,19 @@ m[a-zA-Z0-9]
 :set cursorcolumn
 ```
 
+### show file buffers
+```bash
+# show listed buffers
+:buffers|files|ls       # identical commands
+# show unlisted buffers
+:ls!
+```
+
+### switch to listed buffer
+```bash
+:b[char]                # usually listed index of buffer
+```
+
 ### arglist
 > A subset of the buffer which contains,
 > by default, file arguments passed when
