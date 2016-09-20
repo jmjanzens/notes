@@ -97,6 +97,14 @@ q, l # 'l' = letter from a-z
 @@   # playback last playback
 ```
 
+### command mode navigation from vim command line
+```bash
+:       # enter vim command line
+<C-f>   # edit command line, and history
+<Enter> # execute command on cursor's line
+<C-c>   # exit command line editing mode
+```
+
 ### insert literal character (e.g. tab, even when expandtab set)
 ```bash
 <from Insert mode> 
