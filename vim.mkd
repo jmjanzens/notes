@@ -439,6 +439,11 @@ g,D # in file
 :tabm +i
 ```
 
+### move tab to right-most position
+```
+:tabm
+```
+
 ### insert file contents below cursor
 ```bash
 :r[ead] ./somefile.ext
