@@ -322,6 +322,14 @@ m[a-zA-Z0-9]
 :b[char]                # usually listed index of buffer
 ```
 
+### open file from string in source
+```bash
+# yank text to search to register
+:find <C-r>"
+# to open in new tab (vim)
+:tabnew `find <C-r>"`
+```
+
 ### arglist
 > A subset of the buffer which contains,
 > by default, file arguments passed when
