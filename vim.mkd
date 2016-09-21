@@ -111,6 +111,15 @@ q, l # 'l' = letter from a-z
 ctrl+v, [TAB] # good for m4s
 ```
 
+### normal mode commands from insert mode
+```bash
+# eg: paste from yank buffer
+# in ` -- INSERT -- ' mode:
+<C-o>  # escapes insert mode to execute one normal command
+       # eg: p, w, b, db
+# after, returns to insert mode
+```
+
 ### to refresh edits of file exterior to vim session (e.g. git merge)
 ```bash
 :e[dit]         # re-opens present file when used without arguments
