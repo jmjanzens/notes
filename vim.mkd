@@ -136,14 +136,14 @@ shift+v # visual line !
 ### select to matching XML tag
 ```bash
 v,a,t
-##  pairs powerfully with, y or c
+#  pairs powerfully with, y or c
 [c|y]at # to Change, or Yank
 ```
 
 ### select inner content of XML tag
 ```bash
 v,i,t
-## to toggle cursor loc from bottom/top tag
+# to toggle cursor loc from bottom/top tag
 o
 ```
 
@@ -354,12 +354,12 @@ m[a-zA-Z0-9]
 > can be passed almost any shell expression
 > that would resolve to a list of files
 
-## view args
+### view args
 ```bash
 :ar[gs] # [/home/jm/notes/vim.txt]
 ```
 
-## jump between files in arglist
+### jump between files in arglist
 ```bash
 :n[ext], :p[rev]
 ```
@@ -385,43 +385,43 @@ m[a-zA-Z0-9]
 :vim[grep][!] /{pattern}/[g][j] {file}
 ```
 
-## vimgrep list of files
+### vimgrep list of files
 ```bash
 :vimgrep /React/ \*.jsx
 ```
 
-## jump back and forth in results list
+### jump back and forth in results list
 ```bash
 # optionally jump to (N of [0-N])
 :cn[ext][N], :cp[prev][N]   # can jump between files in arglist
 ```
 
-## search same file glob as before
+### search same file glob as before
 ```bash
 :vimgrep /React/ ##
 ```
 
-## repeat previous search
+### repeat previous search
 ```bash
 :vimgrep /<^+r,/>/ %
 ```
 
-## list 'Quick List' of all matches across files
+### list 'Quick List' of all matches across files
 ```bash
 :lw[indow]
 ```
 
-## list and allow navigation to selected matches
+### list and allow navigation to selected matches
 ```bash
 :cw[indow] [height] # height = result lines to show
 ```
 
-## can be piped from vimgrep
+### can be piped from vimgrep
 ```bash
 :vim /\<pattern\>/ ## |cw
 ```
 
-## list all matches in current file
+### list all matches in current file
 ```bash
 :g//p # p[rint] is default, so not really necessary
 OR

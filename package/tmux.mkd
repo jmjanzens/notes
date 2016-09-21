@@ -74,3 +74,7 @@
     ^r
 ```
 
+### scroll buffer using mouse wheel
+```bash
+```
+
