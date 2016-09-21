@@ -364,6 +364,14 @@ m[a-zA-Z0-9]
 :n[ext], :p[rev]
 ```
 
+### jump list
+```bash
+:h jumplist     # view help docs
+:jumps          # view jumplist
+<C-o>           # prev jump pos
+<C-i>           # next jump pos
+```
+
 ## set contents of arglist
 ```bash
 :args {arglist}
