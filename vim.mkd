@@ -47,12 +47,23 @@ or right-click paste-menu in other  # also from insert-mode
 :vsp path/to/new/file.ext   # creates vertical split bar 'tween files
 :sp                         # horizontal bar
 ^w+w                        # toggle focus 'tween splits
-^w,[up, down]               # focus on above/below split
+^w+[h,j,k,l]                # move focus in direction of movement
 ```
 
 ### swap split windows
 ```bash
 ^w, r # swap current window with 'next' one
+```
+
+### move a split
+```bash
+# <C-w> and one of the following keys:
+r   # rotate windows down/right
+R   # rotate windows up/left
+L   # move current split to far right
+H   # move current split to far left
+J   # move current split to very bottom
+K   # move current split to very top
 ```
 
 ### adjusting width of vertical split
