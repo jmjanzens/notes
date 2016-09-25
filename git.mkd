@@ -82,6 +82,13 @@ $ git pull
 $ git push origin :branchname
 ```
 
+### rename branch locally, and remotely
+```bash
+$ git branch -m old new                 # Rename local branch
+$ git push origin :old                  # Delete old remote branch
+$ git push --set-upstream origin new    # Push new remote branch, and set local branch to track it
+```
+
 
 ### show log WITH code affected
 ```bash
