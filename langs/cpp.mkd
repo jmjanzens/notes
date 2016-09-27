@@ -1,0 +1,13 @@
+# c++11
+
+### automatically execute `run' with gdb
+```bash
+gdb -ex run [--args] ./a.out [arg1, arg2, ...]
+```
+
+### debugging a segfault using gdb
+```bash
+# run gdb and enter
+run
+where
+```
