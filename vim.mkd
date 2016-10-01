@@ -116,6 +116,17 @@ q, l # 'l' = letter from a-z
 <C-c>   # exit command line editing mode
 ```
 
+### enable spell checking
+```bash
+:set spell   # turn on
+:set nospell # turn off
+```
+
+### get spell suggestions (insert mode)
+```bash
+<C-x>,s
+```
+
 ### insert literal character (e.g. tab, even when expandtab set)
 ```bash
 <from Insert mode> 
