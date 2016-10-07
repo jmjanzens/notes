@@ -1,0 +1,23 @@
+# GNU make
+
+### Further reference
+[online man page](https://linux.die.net/man/1/make)
+
+### Debug flags
+```bash
+$ make -d           # debug ALL
+$ make --debug=a    # debug ALL
+$ make --debug=b    # basic
+$ make --debug=v    # basic, but more info
+```
+
+### Unconditionally make all targets
+```bash
+$ make --always-make  # or `-B'
+```
+
+### Print directories navigated during build
+```bash
+$ make --print-directory  # or `-w'
+```
+
