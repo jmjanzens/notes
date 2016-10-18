@@ -11,14 +11,19 @@ $ find [path] [opts] [pattern]
 ## Description:
 Some simple examples of how to use find.
 
-### find a file (case sensitive) ###
+### find a file (case sensitive)
 ```bash
 $ sudo find / -name linq-app\*
 ```
 
-### find a directory ###
+### find a directory
 ```bash
 $ find /home/jmjanzen -name 'node_modules' -type d
+```
+
+### ignore hidden files, dirs
+```bash
+$ find . -not -path '*/\.*'
 ```
 
 ## References:
