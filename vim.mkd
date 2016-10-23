@@ -148,6 +148,11 @@ ctrl+v, [TAB] # good for m4s
 :set autoread   # in .vimrc makes Vim auto-refresh
 ```
 
+### refresh all files in present buffer
+```bash
+:bufdo e[!]
+```
+
 ### different visual modes
 ```bash
 v       # normal drag-and-select
