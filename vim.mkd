@@ -74,6 +74,12 @@ K   # move current split to very top
 :vertical resize [NUM]
 ```
 
+### 'maximise' current split
+```bash
+<C-w>,_     # squash other horizontal splits
+<C-w>,|     # squash other vertical   splits
+```
+
 ### automatically resize splits to equal dimensions
 ```bash
 ^w, =
