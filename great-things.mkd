@@ -8,3 +8,6 @@
 - tree
 - neovim - (or `nvim`) a more exciting fork of vim
 
+### Arch specific
+- yaourt - enable installation of AUR packages directory from source
+
