@@ -474,6 +474,11 @@ g,D # in file
 :tabnew [filename]
 ```
 
+### close all splits in current tab
+```bash
+:tabc[lose]
+```
+
 ### move tab to i
 ```bash
 :tabm[ove] i
