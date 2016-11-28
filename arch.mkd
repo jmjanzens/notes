@@ -7,3 +7,7 @@
 # TODO
 ```
 
+### upgrade packages
+```bash
+pacman -Syyu
+```
