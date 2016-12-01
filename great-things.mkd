@@ -1,0 +1,13 @@
+# A list of great things
+
+## Linux packages
+- screen - the most widely supported terminal multiplexer
+- tmux - a more recent terminal multiplexer, with better split support
+- cmus - a terminal based music library player, with vi-like keybindings
+- git
+- tree
+- neovim - (or `nvim`) a more exciting fork of vim
+
+### Arch specific
+- yaourt - enable installation of AUR packages directory from source
+

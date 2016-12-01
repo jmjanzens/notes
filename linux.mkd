@@ -162,6 +162,11 @@ sudo -E <command(s)>
 sudo -s <alias>
 ```
 
+### convert a *.xlsx to *.csv
+```bash
+sudo libreoffice --headless --convert-to csv filename.xlsx --outdir .
+```
+
 ### repeat specific number command from `history`
 ```bash
 $ history
