@@ -11,3 +11,13 @@
 ```bash
 pacman -Syyu
 ```
+
+### query installed package
+```bash
+pacman -Q  # grep to find specific
+```
+
+### uninstall specific package
+```bash
+pacman -Rns <package-name>
+```
