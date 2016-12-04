@@ -39,9 +39,14 @@ Usage: notes [OPTION] [FILE] [PATTERN]
             Show the list of viewable, searchable, and editable files.
         -e, --edit
             Edit the file in place, using default editor.  Depending on the
-            set by 'update-alternatives --config editor' in /usr/bin/editor
+            the environment variable \`EDITOR'.
             (Debian specific), this action may also create a blank help file
             of this name, if none exists.
+        -f, --find
+            Usage: \`notes -f <pattern>'.  Views all files containing <pattern>
+            in less.  Use \`n' and \`N' to jump back and forth between matches
+            within a file, \`:n' and \`:p' to navigate back and forth between
+            files with matches, and \`q' to exit.
         -s, --subject
             Look into subject directory for topic, specific to that subject.
             Example usage: 'notes --subject linux cmds'
@@ -57,6 +62,7 @@ EOF
         echo 'List of Help Files:\n------------------'
         for n in `\ls ${HOME}/notes`; do
             note=${HOME}/notes/${n}
+
             if [[ -d $note ]]; then
                 echo $note | awk -F '.*/' '
                     /[/]/ { print "\033[34m"$2"\033[0m" }
@@ -74,15 +80,20 @@ EOF
                 '
             fi
         done
+    elif [[ $1 =~ "-f" ]] || [[ $1 =~ "--find" ]]; then
+        if [[ $# -lt 2 ]]; then
+            echo 'Usage:  notes -f <pattern>'
+        else
+            echo grepping...
+            grep -rl $HOME/notes/ --exclude-dir=".git" -e "$2" | xargs less -R --LONG-PROMPT --pattern="$2"
+        fi
     elif [[ -z $2 ]]; then
         less ${HOME}/notes/${1}.mkd
     else
         if [[ $1 =~ "-e" ]] || [[ $1 =~ "--edit" ]]; then
-            /usr/bin/editor ${HOME}/notes/${2}.mkd
+            $EDITOR ${HOME}/notes/${2}.mkd
         elif [[ $1 =~ "-s" ]] || [[ $1 =~ "--subject" ]]; then
             less ${HOME}/notes/${2}/${3}.mkd
-        else
-            grep -rh $HOME/notes/ --exclude-dir=".git" -e $1 | grep --color -C 10 $2
         fi
     fi
 }
