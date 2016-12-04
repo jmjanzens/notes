@@ -7,6 +7,16 @@
 # TODO
 ```
 
+### persistence
+```bash
+vi ~/.xinitrc[.dir/]  # place upstart scripts in here
+```
+
+### persistence under systemd
+```bash
+vi ~/.xprofile        # place upstart scripts in here
+```
+
 ### upgrade packages
 ```bash
 pacman -Syyu
