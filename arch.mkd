@@ -17,6 +17,8 @@ vi ~/.xinitrc[.dir/]  # place upstart scripts in here
 vi ~/.xprofile        # place upstart scripts in here
 ```
 
+## pacman - package manager
+
 ### upgrade packages
 ```bash
 pacman -Syyu
