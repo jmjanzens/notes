@@ -21,3 +21,18 @@ pacman -Q  # grep to find specific
 ```bash
 pacman -Rns <package-name>
 ```
+
+## xset - manage X user prefs
+
+### show current settings
+```bash
+xset q
+```
+
+### manage screen-saver or screen-dimming parameters
+```bash
+xset s [on|off]     # turn screensaver on|off
+xset s [no]blank    # show pattern, or blank the video
+xset [+|-]dpms      # enable|disable Display Power Management Signaling (Energy Star)
+```
+
