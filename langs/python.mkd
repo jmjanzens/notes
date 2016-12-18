@@ -11,3 +11,10 @@ $ py -u code.py | tee off.log
 ```bash
 $ py -m pdb code.py  # need to install pdb module first
 ```
+
+### get version of a module (eg: selenium)
+```bash
+$ py
+    >>> import selenium  # Import modules to check
+    >>> help(selenium)   # Print help text, version at bottom
+```
