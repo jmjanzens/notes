@@ -305,7 +305,7 @@ $ git clone --depth=1 [repo-url]
 
 ### creating and applying patches
 ```bash
-$ git diff <source-SHA1>..<target-SHA1>  > patch.diff  # Or any other valid diff
+$ git diff --color=never <source-SHA1>..<target-SHA1>  > patch.diff  # Or any other valid diff
 $ vi patch.diff  # hack as required
 # Finally, apply where needed:
 $ git apply patch.diff
