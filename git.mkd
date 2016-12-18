@@ -312,6 +312,32 @@ $ git apply patch.diff
 $ git commit  # Or whatever
 ```
 
+## tags
+
+### viewing tags
+```bash
+$ git tag                   # list all tags in repo
+$ git tag --list "v[1-2].*" # list tags according to pattern
+$ git show <tag>            # view message, commit, other info associated with tag
+```
+
+### creating, pushing, checking out tags
+```bash
+$ git tag vx.y.z-rb                         # lightwieght tag, tied to SHA1
+$ git tag --annotate v123                   # unsigned tag, with prompt for message
+$ git tag --annotate v0.0 -m "some message" # unsigned tag, message inline
+$ git tag -a vxxx <SHA1>                    # tag a specific commit by its checksum
+
+$ git push origin vxxx                      # push specific tag to remote
+$ git push origin --tags                    # push ALL tags to remote
+
+$ git checkout -b new-branch vtagname       # create new branch at specific tag
+```
+
+### signing tags, commits
+```bash
+```
+
 ##################
 ### git theory ###
 ##################
