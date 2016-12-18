@@ -334,8 +334,28 @@ $ git push origin --tags                    # push ALL tags to remote
 $ git checkout -b new-branch vtagname       # create new branch at specific tag
 ```
 
-### signing tags, commits
+### generate GPG key, and add to global git config
 ```bash
+# first, check if valid key already exists
+$ gpg --list-keys  # view summary of keys on system
+
+# locate GnuPG keys on system (will need public key)
+$ grep -rHl ~ -e '-----BEGIN PGP.*'
+
+# if none found, generate a key
+$ gpg --gen-key  # follow prompts and wait for output
+
+# add to global git config
+$ git config --global user.signingkey [KEY_ID]
+
+# export public key for external authority (eg: Github)
+$ gpg --armor --export you@email.com
+```
+
+### signing tags, commits (requires GPG key)
+```bash
+$ git tag -s vx.y.z -m 'my signed tag'  # signed tag
+$ git commit -S -m 'my signed commit'   # signed commit
 ```
 
 ##################
