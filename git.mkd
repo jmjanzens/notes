@@ -321,7 +321,7 @@ $ git tag --list "v[1-2].*" # list tags according to pattern
 $ git show <tag>            # view message, commit, other info associated with tag
 ```
 
-### creating, pushing, checking out tags
+### creating, pushing, checking out, deleting tags
 ```bash
 $ git tag vx.y.z-rb                         # lightwieght tag, tied to SHA1
 $ git tag --annotate v123                   # unsigned tag, with prompt for message
@@ -332,6 +332,9 @@ $ git push origin vxxx                      # push specific tag to remote
 $ git push origin --tags                    # push ALL tags to remote
 
 $ git checkout -b new-branch vtagname       # create new branch at specific tag
+
+$ git tag -d v.oink                         # delete tag on local
+$ git push origin :v.oink                   # delete tag on remote
 ```
 
 ### generate GPG key, and add to global git config
