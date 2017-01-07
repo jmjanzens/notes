@@ -7,6 +7,7 @@
 - git
 - tree
 - neovim - (or `nvim`) a more exciting fork of vim
+- pyenv - manage multiple version of python
 
 ### Arch specific
 - yaourt - enable installation of AUR packages directory from source
