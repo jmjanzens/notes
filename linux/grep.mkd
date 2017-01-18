@@ -56,5 +56,11 @@ $ grep -F[x]f a b --color
 
 ### return last word in line
 ```bash
+$ ls -l | grep -E '[^ ]+$'
 ```
-ls -l | grep -E '[^ ]+$'
+
+### return files without match
+```bash
+$ grep -rL "quux" ../some-path/*
+```
+
