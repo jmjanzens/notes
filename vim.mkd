@@ -277,6 +277,11 @@ t [char]
 :%s/\(\w+\)[:]/"\1":/g
 ```
 
+### remove duplicate newlines (use `cat's' --squeeze-blank flag)
+```bash
+:%!cat -s
+```
+
 ### highlight all id tags (words, any, between double-quotes)
 ```bash
 /id="\w\+"
