@@ -312,6 +312,11 @@ $ git apply patch.diff
 $ git commit  # Or whatever
 ```
 
+### search for pattern accross all branches
+```bash
+$ git grep <pattern> $(git rev-list --all)
+```
+
 ## tags
 
 ### viewing tags
