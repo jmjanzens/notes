@@ -89,6 +89,23 @@ $ git push origin :old                  # Delete old remote branch
 $ git push --set-upstream origin new    # Push new remote branch, and set local branch to track it
 ```
 
+### update forked repo
+```bash
+# Add the remote, call it "upstream":
+git remote add upstream https://github.com/whoever/whatever.git
+
+# Fetch all the branches of that remote into remote-tracking branches
+git fetch upstream
+
+# Make sure that you're on your master branch:
+git checkout master
+
+# Rewrite your master branch so that any commits of yours that
+# aren't already in upstream/master are replayed on top of that
+# other branch:
+git rebase upstream/master
+```
+
 
 ### show log WITH code affected
 ```bash
@@ -310,6 +327,11 @@ $ vi patch.diff  # hack as required
 # Finally, apply where needed:
 $ git apply patch.diff
 $ git commit  # Or whatever
+```
+
+### search for pattern accross all branches
+```bash
+$ git grep <pattern> $(git rev-list --all)
 ```
 
 ## tags
