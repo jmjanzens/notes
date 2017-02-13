@@ -31,6 +31,87 @@ $ cd ~/trees/go/src/github.com/jm-janzen/nfacer/
 $ go get ./...
 ```
 
+## Idiosyncrasies
+
+### For loop init and post statements are optional
+```golang
+    sum1, sum2, sum3 := 1, 1, 1
+    for i := 0; i < 10; i++ {
+        sum1 += sum1
+    }
+    for ; sum2 < 1024; {
+        sum2 += sum2
+    }
+    for sum3 < 1024 {  // C's "while" is spelled "for" in Go :)
+        sum3 += sum3
+    }
+    fmt.Println(sum1, sum2, sum3)  // 1024 1024 1024
+```
+
+### Infinite loop
+```golang
+    for {
+        fmt.Print(" SI ")
+    }
+```
+
+### Like for, if statements can begin with a short statement (eg assignment)
+```golang
+    const j = 666
+    if i := 777; i > j  {
+        fmt.Printf("%v is greater than %v\n", i, j)  // 777 is greater than 666
+    }
+```
+
+### If variable scope
+```golang
+    const j = 666
+    if i := 777; i < j  {
+        fmt.Println("a", i)  // Good
+    } else if j < i{
+        fmt.Println("b", i)  // Good
+    } else {
+        fmt.Println("c", i)  // Good
+    }
+    fmt.Println("d", i)      // Err: undefined i
+```
+
+### Switch statement
+```golang
+    // Cases break automatically
+    switch os := runtime.GOOS; os {
+    case "linux":
+        fmt.Println("Good")
+    default:
+        fmt.Println("Ew")
+    }
+
+    // Switch without condition is like `switch true` (thank God)
+    t := time.Now()
+    switch {
+    case t.Hour() < 12:
+        fmt.Println("Good morning!")
+    case t.Hour() < 17:
+        fmt.Println("Good afternoon.")
+    default:
+        fmt.Println("Good evening.")
+    }
+```
+
+### Defer statement
+```golang
+func hello() {
+    defer fmt.Println("world!")  // Will not execute until this block returns
+    fmt.Print("Hello" + " ")
+}  // "Hello world!"
+
+// Deferred functions are pushed on to LIFO stack
+    for i := 0; i < 3; i++ {
+        defer fmt.Print(i, " ")  // "oink 2 1 0"
+    }
+    fmt.Print("oink ")
+```
+
 ## Useful snippets
 
 ### Print type of variable
@@ -38,11 +119,11 @@ $ go get ./...
 fmt.Printf("v(%v) is of type %T\n", v, v)
 ```
 
-## Language idioms
+## Language idioms, conventions
 
 ### Public ("Exported" , versus private ("unexported") names
 ```golang
-fmt.Printf(farm.pig)  // Err: cannot refer to unexported name farm.pig
-fmt.Printf(farm.Pig)  // "OINK!"
+    fmt.Printf(farm.pig)  // Err: cannot refer to unexported name farm.pig
+    fmt.Printf(farm.Pig)  // "OINK!"
 ```
 
