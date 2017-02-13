@@ -1,0 +1,24 @@
+# golang 1.7.5
+
+---
+
+### Most basic required paths
+```bash
+# Example
+$ go env
+  GOPATH="/home/jm/trees/go" # Home of projects
+  GOROOT="/usr/lib/go"       # Golang install dir (may vary)
+
+$ echo $PATH
+/usr/bin:/etc/etc/etc/:/home/jm/trees/go
+```
+
+### Get all project dependencies
+```bash
+# Go to project dir
+$ cd ~/trees/go/src/github.com/jm-janzen/nfacer/
+
+# Fetch dependencies in import(s), recursively
+$ go get ./...
+```
+
