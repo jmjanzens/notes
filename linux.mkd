@@ -35,7 +35,7 @@ $ sh
 $ sudo chsh -s $(which <SHELL>) <user>
 ```
 
-###to clear current command line
+###to clear current command line (emacs mode)
 ```bash
 Ctrl+u # clears
 Ctrl+c # clears, and starts new line
@@ -175,6 +175,9 @@ $ history
 	3	vi -O thing thing2
 $ !2 # repeats `cat thing`
 ```
+
+### update active less on file changes
+> (While less is active, press) F
 
 ### understand netstat interface display
 $ netstat -i
