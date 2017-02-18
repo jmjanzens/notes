@@ -31,6 +31,11 @@ pacman -Q  # grep to find specific
 
 ### uninstall specific package
 ```bash
+pacman -R <package-name>
+```
+
+### uninstall specific package (and dependencies)
+```bash
 pacman -Rns <package-name>
 ```
 
