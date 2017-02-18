@@ -1,0 +1,14 @@
+# pulseaudio
+
+## Summary:
+PulseAudio Sound System
+
+#### Problem
+> sound crackling
+
+#### Solution
+> restart pulseaudio
+```bash
+$ pulseaudio -k
+```
+
