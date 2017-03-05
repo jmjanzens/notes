@@ -26,7 +26,25 @@ pacman -Syyu
 
 ### query installed package
 ```bash
+pacman -Q [package-name]  # or just grep output
+# Returns a flat list of package name and version number
+```
+
+### detailed query installed package
+```bash
+pacman -Qi [package-name]
+# Returns name, desc, groups, depends, etc ...
+```
+
+### query installed package
+```bash
 pacman -Q  # grep to find specific
+# Returns a flat list of package name and version number
+```
+
+### query installed package + name & info
+```bash
+pacman -Qs <pattern>
 ```
 
 ### uninstall specific package
