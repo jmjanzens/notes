@@ -89,6 +89,13 @@ $ git push origin :old                  # Delete old remote branch
 $ git push --set-upstream origin new    # Push new remote branch, and set local branch to track it
 ```
 
+### push local commits to another branch
+```bash
+# git push <remote> <src branch>:<dest branch>
+# Example:
+$ git push origin dev:some-feature-branch
+```
+
 ### update forked repo
 ```bash
 # Add the remote, call it "upstream":
