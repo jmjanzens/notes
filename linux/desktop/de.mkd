@@ -1,0 +1,23 @@
+# Desktop Environments
+
+## Summary
+
+> A GUI comprised of a variety of components using a common widget
+> toolkit and set of libraries.
+
+## Gnome
+
+### Configuring
+
+> Uses DConf database to store system and application settings.
+
+#### gsettings
+
+> CLI to configure Dconf indirectly.
+```bash
+# Example usage: gsettings <ACTION> <TARGET>
+$ gsettings list-recursively org.nemo.desktop              # list keys:vals for this group
+$ gsettings get org.nemo.desktop show-desktop-icons        # show value for this setting
+$ gsettings set org.nemo.desktop show-desktop-icons false  # set value for this setting
+```
+

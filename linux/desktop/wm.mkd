@@ -1,0 +1,19 @@
+# Window Managers
+
+## Summary
+
+> Controls placement and appearance of windows within a GUI.
+> Can be part of a Desktop Environment (DE), or standalone.
+
+## i3
+
+> A Tiling Window Manage with non-overlapping windows and
+> vim-like key bindings.
+
+### Configuration
+
+> Configuration housed at `~/.config/i3/config`.  Within, upstart
+> commands can be specified using `exec` (at startup only),
+> or `exec_always` (at startup and refresh of configuration), followed
+> py parameters and a path to some script.
+
