@@ -26,5 +26,10 @@ $ find /home/jmjanzen -name 'node_modules' -type d
 $ find . -not -path '*/\.*'
 ```
 
+### find latest file recursively
+```bash
+$ find . -type f | xargs stat --format '%y %n' | sort
+```
+
 ## References:
 * `man find`
