@@ -197,6 +197,11 @@ $ netstat -i
 sudo update-alternatives --config editor # then enter number from list
 ```
 
+### find parent of zombie
+```bash
+ps -p <PID> -o comm=
+```
+
 
 ### command line tricks ###
 
