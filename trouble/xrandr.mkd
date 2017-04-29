@@ -1,0 +1,16 @@
+# xrandr
+
+## Summary:
+Primitive command line interface to RandR extension
+
+#### Problem
+> HDMI monitor not recognized
+
+
+#### Solution
+```bash
+$ xrandr --listmonitors  # Ensure not in list
+$ xrandr --auto  # Refresh (should do it)
+$ xrandr && xrandr --output DVI-0 --left-of HDMI-0  # Example setup
+```
+
