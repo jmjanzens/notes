@@ -162,6 +162,13 @@ sudo -E <command(s)>
 sudo -s <alias>
 ```
 
+### bc (Basic Calc) with floating point
+```
+# opt `-l` indicates use the std math lib
+echo '1/5' | bc     # 0
+echo '1/5' | bc -l  # .2
+```
+
 ### convert a *.xlsx to *.csv
 ```bash
 sudo libreoffice --headless --convert-to csv filename.xlsx --outdir .
