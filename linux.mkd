@@ -118,6 +118,14 @@ diff a b --side-by-side /*or*/ -y
 diff a b -u # 'unified' style
 ```
 
+### sort output into columns
+```
+# from file:
+column -t data.txt
+# example pipe usage:
+diff -qrN a b | column -t
+```
+
 ### sort package
 ```bash
 sort -g       # sort numerically
