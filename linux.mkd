@@ -197,6 +197,12 @@ $ !2 # repeats `cat thing`
 scrot -cud 5  # wait 5s and take screenshot of focused window
 ```
 
+### core dumps
+```
+coredumpctl [list]      # show dumps, basic location, owners
+coredumpctl info <PID>  # show detailed info on specific dump
+```
+
 ### update active less on file changes
 > (While less is active, press) F
 
